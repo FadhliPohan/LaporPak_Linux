@@ -56,4 +56,4 @@ if($insert){
     echo "insert data gagal";
 }
 */
-header("location:../tbl_kepala.php");
+header("location:../tbl_su.php");
