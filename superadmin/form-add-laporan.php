@@ -1,5 +1,20 @@
 <?php
+$page = 'semua';
 include 'header.php';
+
+//MENCARI RANDOM NUMBER
+function create_random($length)
+{
+    $data = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ1234567890';
+    $string = 'SLUG';
+    for ($i = 0; $i <= $length; $i++) {
+
+        $pos = rand(0, strlen($data) - 1);
+        $string .= $data[$pos];
+    }
+    return $string;
+}
+
 ?>
 
 <!-- Begin Page Content -->
@@ -21,7 +36,7 @@ include 'header.php';
                 <div class="form-group row">
                     <label for="NID" class="col-sm-2 col-form-label">No.Tiket</label>
                     <div class="col-sm-3">
-                        <input type="text" name="nid" class="form-control" id="NID" placeholder="10 Digit" maxlength="10" value="">
+                        <input type="text" name="nid" class="form-control" id="NID" placeholder="10 Digit" maxlength="10" value="<?php echo  $num = create_random(12); ?>" readonly>
 
                     </div>
                 </div>

@@ -49,7 +49,7 @@ include 'header.php';
 
                     include "../koneksi.php";
 
-                    $sql = "SELECT a.*, r.*, u.* FROM admin a JOIN role r JOIN user u WHERE a.id_role = 2 AND a.id_role = r.id_role AND a.id_user = u.id_user;";
+                    $sql = "SELECT a.*, r.*, u.* FROM admin a JOIN role r JOIN user u WHERE a.id_role = 2 AND a.id_role = r.id_role AND a.email = u.email;";
                     $query = mysqli_query($konek, $sql) or die("SQL Anda Salah");
                     //Baca hasil query dari databse, gunakan perulangan untuk 
                     //Menampilkan data lebh dari satu. disini akan digunakan

@@ -9,16 +9,15 @@ include "../koneksi.php";
 $id = $_SESSION['slug'];
 $email = $_SESSION['email'];
 $idrole = $_SESSION['id_role'];
+$foto = $_SESSION['foto'];
 
 if ($idrole == 1) {
-    echo "<script>location.href='../superadmin/index.php'</script>";
+    echo "<script>location.href='../superadmin/'</script>";
 } elseif ($idrole == 2) {
-    echo "<script>location.href='../staff/index.php'</script>";
+    echo "<script>location.href='../staff/'</script>";
 } elseif ($idrole == 3) {
-    echo "<script>location.href='../kepala/index.php'</script>";
-} else {
-    echo "<script>location.href='../user/index.php'</script>";
-}
+    echo "<script>location.href='../kepala/'</script>";
+} 
 
 ?>
 <!DOCTYPE html>
@@ -299,8 +298,8 @@ if ($idrole == 1) {
                         <li class="nav-item dropdown no-arrow">
                             <a class="nav-link dropdown-toggle" href="#" id="userDropdown" role="button"
                                 data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                <span class="mr-2 d-none d-lg-inline text-gray-600 small">Douglas McGee</span>
-                                <img class="img-profile rounded-circle" src="img/undraw_profile.svg">
+                                <span class="mr-2 d-none d-lg-inline text-gray-600 small"><?=$email?></span>
+                                <img class="img-profile rounded-circle" src="../assets/img/foto/<?=$foto?>">
                             </a>
                             <!-- Dropdown - User Information -->
                             <div class="dropdown-menu dropdown-menu-right shadow animated--grow-in"
