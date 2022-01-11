@@ -22,7 +22,7 @@ include 'header.php';
                 <div class="form-group row">
                     <label for="NID" class="col-sm-2 col-form-label">NIK</label>
                     <div class="col-sm-3">
-                        <input type="text" name="nik" class="form-control" id="nik" placeholder="10 Digit" maxlength="10" value="">
+                        <input type="text" name="nik" class="form-control" id="nik" placeholder="10 Digit" maxlength="10" value="" required>
 
                     </div>
                 </div>
@@ -30,7 +30,7 @@ include 'header.php';
                 <div class="form-group row">
                     <label for="nama" class="col-sm-2 col-form-label">Nama Kepala</label>
                     <div class="col-sm-10">
-                        <input type="text" name="nama" class="form-control" id="nama" placeholder="Nama Lengkap" value="">
+                        <input type="text" name="nama" class="form-control" id="nama" placeholder="Nama Lengkap" value="" required>
 
                     </div>
                 </div>
@@ -39,12 +39,12 @@ include 'header.php';
 
                     <div class="form-group col-sm-6">
                         <label for="email">Email</label>
-                        <input type="text" name="email" id="email" class="form-control" placeholder="Email yang aktif" value="">
+                        <input type="text" name="email" id="email" class="form-control" placeholder="Email yang aktif" value="" required>
 
                     </div>
                     <div class="form-group col-sm-6">
                         <label for="password">Password</label>
-                        <input type="Password" name="password" id="password" class="form-control" placeholder="Password Email" maxlength="13" value="">
+                        <input type="Password" name="password" id="password" class="form-control" placeholder="Password Email" maxlength="13" value="" required>
 
                     </div>
 
@@ -53,7 +53,7 @@ include 'header.php';
                 <div class="form-row">
                     <div class="form-group col-sm-4">
                         <label for="jenis_kelamin">Jenis Kelamin</label>
-                        <select name="jenis_kelamin" id="jenis_kelamin" class="form-control">
+                        <select name="jenis_kelamin" id="jenis_kelamin" class="form-control" required>
                             <option value="">Pilih Jenis Kelamin</option>
                             <option value="Laki-Laki">Laki - Laki</option>
                             <option value="Perempuan">Perempuan</option>
@@ -62,24 +62,24 @@ include 'header.php';
                     </div>
                     <div class="form-group col-sm-4">
                         <label for="tmp_lahir">Tempat Lahir</label>
-                        <input type="text" class="form-control" name="tmp_lahir" id="tmp_lahir" placeholder="Kota Tempat Lahir">
+                        <input type="text" class="form-control" name="tmp_lahir" id="tmp_lahir" placeholder="Kota Tempat Lahir" required>
 
                     </div>
                     <div class="form-group col-sm-4">
                         <label for="tgl_Lahir">Tanggal Lahir</label>
-                        <input type="date" class="form-control" name="tgl_lahir" id="tgl_lahir">
+                        <input type="date" class="form-control" name="tgl_lahir" id="tgl_lahir" required>
 
                     </div>
                 </div>
                 <div class="form-row">
                     <div class="form-group col-sm-4">
                         <label for="notlp">No. Telepon</label>
-                        <input type="text" name="notlp" id="notlp" class="form-control" placeholder="Nomor yang aktif" maxlength="13" value="">
+                        <input type="text" name="notlp" id="notlp" class="form-control" placeholder="Nomor yang aktif" maxlength="13" value="" required>
 
                     </div>
                     <div class="form-group col-sm-4">
                         <label for="agama">Agama</label>
-                        <select name="agama" id="agama" class="form-control">
+                        <select name="agama" id="agama" class="form-control" required>
                             <option value="">Pilih Agama</option>
                             <option value="Islam">Islam</option>
                             <option value="Kristen">Kristen</option>
@@ -92,7 +92,7 @@ include 'header.php';
                     </div>
                     <div class="form-group col-sm-4">
                         <label for="agama">Pekerjaan</label>
-                        <select name="pekerjaan" id="pekerjaan" class="form-control">
+                        <select name="pekerjaan" id="pekerjaan" class="form-control" required>
                             <option value="">Pilih Pekerjaan</option>
                             <option value="Polisi">Polisi</option>
                             <option value="TNI">TNI</option>
@@ -113,14 +113,14 @@ include 'header.php';
                 <div class="form-group row">
                     <label for="alamat" class="col-sm-2 col-form-label">Alamat</label>
                     <div class="col-sm-10">
-                        <input type="text" name="alamat" class="form-control" id="alamat" placeholder="Alamat Lengkap" value="">
+                        <input type="text" name="alamat" class="form-control" id="alamat" placeholder="Alamat Lengkap" value="" required>
 
                     </div>
                 </div>
                 <div class="form-group row">
                     <label for="foto" class="col-sm-2 col-form-label">Foto Profil</label>
                     <div class="col-sm-10">
-                        <input type="file" name="foto" class="form-control" id="foto" placeholder="Foto anda" value="">
+                        <input type="file" name="foto" class="form-control" id="foto" placeholder="Foto anda" value="" required>
 
                     </div>
                 </div>

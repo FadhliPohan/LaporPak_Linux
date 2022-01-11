@@ -69,7 +69,7 @@ include 'header.php';
                                 <td><?= $data['jenis_kelamin'] ?></td>
                                 <td><?= $data['pekerjaan'] ?></td>
                                 <td><?= $data['alamat'] ?></td>
-                                <td><a href='edit/su.php?email=<?php echo $data['email']; ?>' class='btn btn-info btn-circle'><i class="fas fa-info-circle"></i></a>
+                                <td><a href='form-update-su.php?emailku=<?php echo $data['email']; ?>' class='btn btn-info btn-circle'><i class="fas fa-info-circle"></i></a>
                                     <a href='delete/su.php?email=<?php echo $data['email']; ?>' class='btn btn-danger btn-circle'><i class="fas fa-trash"></i></a>
                                 </td>
                             </tr>

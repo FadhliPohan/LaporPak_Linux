@@ -1,7 +1,9 @@
 <?php
-$page = "user";
+$page = "kepala";
 include 'header.php';
-
+$id_mail = $_GET['emailku'];
+$mailku = mysqli_query($konek, "SELECT a.*, r.*, u.* FROM admin a JOIN role r JOIN user u WHERE a.email = '$id_mail' AND a.id_role = r.id_role AND a.email = u.email;");
+$row = mysqli_fetch_array($mailku);
 
 ?>
 
@@ -14,21 +16,21 @@ include 'header.php';
     <!-- DataTales Example -->
     <div class="card shadow mb-4">
         <div class="card-header py-3 bg-primary">
-            <h6 class="m-0 font-weight-bold text-light">Form Pelapor</h6>
+            <h6 class="m-0 font-weight-bold text-light">Form Kepala</h6>
         </div>
         <div class="card-body">
 
-            <form action="add/user.php" method="POST" enctype="multipart/form-data">
+            <form action="add/kepala.php" method="POST" enctype="multipart/form-data">
                 <div class="form-group row">
                     <label for="NID" class="col-sm-2 col-form-label">NIK</label>
                     <div class="col-sm-3">
-                        <input type="text" name="nik" class="form-control" id="nik" placeholder="10 Digit" maxlength="10" value="" required>
+                        <input type="text" name="nik" class="form-control" id="nik" placeholder="10 Digit" maxlength="10" value="<?php echo $row['nik'] ?>" required>
 
                     </div>
                 </div>
 
                 <div class="form-group row">
-                    <label for="nama" class="col-sm-2 col-form-label">Nama Pelapor</label>
+                    <label for="nama" class="col-sm-2 col-form-label">Nama Kepala</label>
                     <div class="col-sm-10">
                         <input type="text" name="nama" class="form-control" id="nama" placeholder="Nama Lengkap" value="" required>
 
@@ -125,7 +127,7 @@ include 'header.php';
                     </div>
                 </div>
                 <div class="form-actions">
-                    <a href="tbl_user.php" class="btn btn-info mt-2"><i class="fas fa-fw fa-arrow-left"></i> Kembali</a>
+                    <a href="tbl_kepala.php" class="btn btn-info mt-2"><i class="fas fa-fw fa-arrow-left"></i> Kembali</a>
                     <button type="submit" class="btn btn-success mt-2"> <i class="fa fa-check"></i> Simpan</button>
                     <button type="reset" class="btn btn-danger mt-2"><i class="fa fa-times"></i> Hapus</button>
                 </div>

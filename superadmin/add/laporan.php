@@ -12,9 +12,9 @@ $lapiran_bukti    = $_POST['lapiran_bukti'];
 include '../koneksi.php';
 
 // upload cover
-$file_name        = $_FILES['cover']['name'];
-$file_tmp         = $_FILES['cover']['tmp_name'];
-move_uploaded_file($file_tmp, "cover/" . $file_name);
+$file_name      = $_FILES['foto']['name'];
+$file_tmp       = $_FILES['foto']['tmp_name'];
+move_uploaded_file($file_tmp, "../../assets/img/foto/" . $file_name);
 
 // sintaks sql untuk insert data
 $sql              = "insert into tbl_materi SET id='$id',title= '$title',category='$category',

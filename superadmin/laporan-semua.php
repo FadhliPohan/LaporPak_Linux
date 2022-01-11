@@ -107,7 +107,7 @@ include 'header.php';
                             <td><?= $data['tanggal_kejadian'] ?></td>
                             <td><?= $data['tanggal'] ?></td>
                             <td><?= $data['lampiran_bukti'] ?></td>
-                            <td><a href='edit/laporan.php?no_tiket=<?php echo $data['no_tiket']; ?>' class='btn btn-info btn-circle'><i class="fas fa-info-circle"></i></a>
+                            <td><a href='edit/form-update-laporan.php?no_tiket=<?php echo $data['no_tiket']; ?>' class='btn btn-info btn-circle'><i class="fas fa-info-circle"></i></a>
                                 <a href='delete/laporan.php?no_tiket=<?php echo $data['no_tiket']; ?>' class='btn btn-danger btn-circle'><i class="fas fa-trash"></i></a>
                             </td>
                         </tr>
