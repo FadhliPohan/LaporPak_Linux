@@ -23,6 +23,7 @@ include 'header.php';
                             <div class="text-xs font-weight-bold text-primary text-uppercase mb-1">
                                 Semua Laporan</div>
                             <?php
+                            //codingan Join Memangil detail Laporan
                             $data_semua = mysqli_query($konek, "SELECT d.*, u.* FROM detail_laporan d JOIN user u WHERE d.id_user = u.id_user group by d.id_detail_laporan DESC");
                             $semua = mysqli_num_rows($data_semua);
                             ?>
