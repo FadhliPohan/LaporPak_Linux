@@ -29,25 +29,20 @@
   <!-- Template Main CSS File -->
   <link href="assets/css/style.css" rel="stylesheet">
 
-  <!-- =======================================================
-  * Template Name: Selecao - v4.6.0
-  * Template URL: https://bootstrapmade.com/selecao-bootstrap-template/
-  * Author: BootstrapMade.com
-  * License: https://bootstrapmade.com/license/
-  ======================================================== -->
+
 </head>
 
 <body>
 
   <!-- ======= Header ======= -->
-  <header id="header" class="fixed-top d-flex align-items-center  header-transparent ">
+  <header id="header" class="fixed-top d-flex align-items-center  header ">
     <div class="container d-flex align-items-center justify-content-between">
 
       <div class="logo">
-      <!-- <img src="assets/img/polres/polres.png" class="navbar-logo-img" alt=""> -->
+        <!-- <img src="assets/img/polres/polres.png" class="navbar-logo-img" alt=""> -->
         <!-- <h1><a href="index.php">Kepolisian</a></h1> -->
         <!-- Uncomment below if you prefer to use an image logo -->
-        <a href="index.php"><img src="assets/img/polres/logopolres.png" alt="" class="img-fluid" width="180" height ="60"></a>
+        <a href="index.php"><img src="assets/img/polres/bareskrim.png" alt="" class="img-fluid" width="80" height="60"></a>
       </div>
 
       <nav id="navbar" class="navbar">
@@ -75,7 +70,7 @@
               <li><a href="#">Drop Down 4</a></li>
             </ul>
           </li>
-        
+
           <li><a class="nav-link scrollto" href="#contact">Kontak</a></li>
           <li><a class="nav-link scrollto" href="login.php">LAPOR</a></li>
         </ul>
@@ -89,12 +84,13 @@
   <section id="hero" class="d-flex flex-column justify-content-end align-items-center">
     <div id="heroCarousel" data-bs-interval="5000" class="container carousel carousel-fade" data-bs-ride="carousel">
 
+
       <!-- Slide 1 -->
       <div class="carousel-item active">
         <div class="carousel-container">
           <h2 class="animate__animated animate__fadeInDown">Selamat Datang Di <span>Pelayanaan Aduan Masyarakat</span></h2>
           <p class="animate__animated fanimate__adeInUp">Kami merupakan sarana untuk mendapatkan informasi dalam menanggapi aduan masyarakat.</p>
-          <a href="#about" class="btn-get-started animate__animated animate__fadeInUp scrollto">Cek Disini</a>
+          <a href="login.php" class="btn-get-started animate__animated animate__fadeInUp scrollto">Cek Disini</a>
         </div>
       </div>
 
@@ -102,8 +98,8 @@
       <div class="carousel-item">
         <div class="carousel-container">
           <h2 class="animate__animated animate__fadeInDown">Siapakah Kami?</h2>
-          <p class="animate__animated animate__fadeInUp">Ut velit est quam dolor ad a aliquid qui aliquid. Sequi ea ut et est quaerat sequi nihil ut aliquam. Occaecati alias dolorem mollitia ut. Similique ea voluptatem. Esse doloremque accusamus repellendus deleniti vel. Minus et tempore modi architecto.</p>
-          <a href="#about" class="btn-get-started animate__animated animate__fadeInUp scrollto">Cek Disini</a>
+          <p class="animate__animated animate__fadeInUp">Pemerintah Republik Indonesia membentuk Sistem Pengelolaan Pengaduan Pelayanan Publik Nasional (SP4N) - Layanan Aspirasi dan Pengaduan Online Rakyat (LAPOR!) adalah layanan penyampaian semua aspirasi dan pengaduan masyarakat Indonesia melalui beberapa kanal pengaduan .LAPOR! telah ditetapkan sebagai Sistem Pengelolaan Pengaduan Pelayanan Publik Nasional (SP4N) berdasarkan Peraturan Presiden Nomor 76 Tahun 2013 dan Peraturan Menteri Pendayagunaan Aparatur Negara dan Reformasi Birokrasi Nomor 3 Tahun 2015.</p>
+          <a href="login.php" class="btn-get-started animate__animated animate__fadeInUp scrollto">Cek Disini</a>
         </div>
       </div>
 
@@ -111,8 +107,8 @@
       <div class="carousel-item">
         <div class="carousel-container">
           <h2 class="animate__animated animate__fadeInDown">Bagaimana Kami Bisa mengadu?</h2>
-          <p class="animate__animated animate__fadeInUp">Ut velit est quam dolor ad a aliquid qui aliquid. Sequi ea ut et est quaerat sequi nihil ut aliquam. Occaecati alias dolorem mollitia ut. Similique ea voluptatem. Esse doloremque accusamus repellendus deleniti vel. Minus et tempore modi architecto.</p>
-          <a href="#about" class="btn-get-started animate__animated animate__fadeInUp scrollto">LAPOR</a>
+          <p class="animate__animated animate__fadeInUp">dibentuk untuk merealisasikan kebijakan “no wrong door policy” yang menjamin hak masyarakat agar pengaduan dari manapun dan jenis apapun akan disalurkan kepada penyelenggara pelayanan publik yang berwenang menanganinya. </p>
+          <a href="login.php" class="btn-get-started animate__animated animate__fadeInUp scrollto">LAPOR</a>
         </div>
       </div>
 
@@ -151,26 +147,23 @@
 
         <div class="section-title" data-aos="zoom-out">
           <h2>Tentang</h2>
-          <p>Siapakah Kami ?</p>
+          <p>Profil Kami ?/p>
         </div>
 
         <div class="row content" data-aos="fade-up">
           <div class="col-lg-6">
             <p>
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore
-              magna aliqua.
+              Pengelolaan pengaduan pelayanan publik di setiap organisasi penyelenggara di Indonesia belum terkelola secara efektif dan terintegrasi. Masing-masing organisasi penyelenggara mengelola pengaduan secara parsial dan tidak terkoordinir dengan baik. Akibatnya terjadi duplikasi penanganan pengaduan, atau bahkan bisa terjadi suatu pengaduan tidak ditangani oleh satupun organisasi penyelenggara, dengan alasan pengaduan bukan kewenangannya. Oleh karena itu, untuk mencapai visi dalam good governance maka perlu untuk mengintegrasikan sistem pengelolaan pengaduan pelayanan publik dalam satu pintu. Tujuannya, masyarakat memiliki satu saluran pengaduan secara Nasional.
             </p>
             <ul>
-              <li><i class="ri-check-double-line"></i> Ullamco laboris nisi ut aliquip ex ea commodo consequat</li>
-              <li><i class="ri-check-double-line"></i> Duis aute irure dolor in reprehenderit in voluptate velit</li>
-              <li><i class="ri-check-double-line"></i> Ullamco laboris nisi ut aliquip ex ea commodo consequat</li>
+              <li><i class="ri-check-double-line"></i> Penyelenggara dapat mengelola pengaduan dari masyarakat secara sederhana, cepat, tepat, tuntas, dan terkoordinasi dengan baik.</li>
+              <li><i class="ri-check-double-line"></i> Penyelenggara memberikan akses untuk partisipasi masyarakat dalam menyampaikan pengaduan;</li>
+              <li><i class="ri-check-double-line"></i> Meningkatkan kualitas pelayanan publik</li>
             </ul>
           </div>
           <div class="col-lg-6 pt-4 pt-lg-0">
             <p>
-              Ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate
-              velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in
-              culpa qui officia deserunt mollit anim id est laborum.
+              Lembaga pengelola SP4N-LAPOR! adalah Kementerian Pendayagunaan Aparatur Negara dan Reformasi Birokrasi (Kementerian PANRB) sebagai Pembina Pelayanan Publik, Kantor Staf Presiden (KSP) sebagai Pengawas Program Prioritas Nasional dan Ombudsman Republik Indonesia sebagai Pengawas Pelayanan Publik. LAPOR! telah ditetapkan sebagai Sistem Pengelolaan Pengaduan Pelayanan Publik Nasional (SP4N) berdasarkan Peraturan Presiden Nomor 76 Tahun 2013 dan Peraturan Menteri Pendayagunaan Aparatur Negara dan Reformasi Birokrasi Nomor 3 Tahun 2015.
             </p>
             <a href="#" class="btn-learn-more">Learn More</a>
           </div>
@@ -856,8 +849,8 @@
 
               <div class="phone">
                 <i class="bi bi-phone"></i>
-                <h4>Call:</h4>
-                <p>+62 1111 2222 22</p>
+                <h4>No. Hp:</h4>
+                <p>+62 8217 7854 250</p>
               </div>
 
             </div>
