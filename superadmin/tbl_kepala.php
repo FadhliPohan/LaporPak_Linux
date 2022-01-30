@@ -19,10 +19,10 @@ include 'header.php';
         <div class="card-body">
             <div class="table-responsive table-striped">
                 <div class="mb-2">
-                    <a href="form-add-kepala.php" class="btn btn-info">Tambah Kepala Kepolisian <i class="fas fa-fw fa-plus-circle"></i> </a>
+                    <a href="form-add-kepala.php" class="btn btn-primary">Tambah Kepala Kepolisian <i class="fas fa-fw fa-plus-circle"></i> </a>
                 </div>
                 <table class="table table-bordered " id="dataTable" width="100%" cellspacing="0">
-                    <thead class="thead-dark">
+                    <thead style="background-color: #3f65d4; color: #FFFFFF;">
                         <tr>
                             <th>No</th>
                             <th>email</th>
@@ -31,7 +31,8 @@ include 'header.php';
                             <th>Jenis Kelamin</th>
                             <th>Pekerjaan</th>
                             <th>Alamat</th>
-                            <th>Aksi</th>
+                            <th>Edit</th>
+                            <th>Hapus</th>
                         </tr>
                     </thead>
                     <tfoot>
@@ -43,7 +44,8 @@ include 'header.php';
                             <th>Jenis Kelamin</th>
                             <th>Pekerjaan</th>
                             <th>Alamat</th>
-                            <th>Aksi</th>
+                            <th>Edit</th>
+                            <th>Hapus</th>
                         </tr>
                     </tfoot>
                     <tbody>
@@ -70,8 +72,8 @@ include 'header.php';
                                 <td><?= $data['jenis_kelamin'] ?></td>
                                 <td><?= $data['pekerjaan'] ?></td>
                                 <td><?= $data['alamat'] ?></td>
-                                <td><a href='form-update-kepala.php?emailku=<?php echo $data['email']; ?>' class='btn btn-info btn-circle'><i class="fas fa-info-circle"></i></a>
-                                    <a href='delete/kepala.php?email=<?php echo $data['email']; ?>' class='btn btn-danger btn-circle'><i class="fas fa-trash"></i></a>
+                                <td><a href='form-update-kepala.php?emailku=<?php echo $data['email']; ?>' class='btn btn-warning '><i class="bi bi-pen"></i></a></td>
+                                <td><a href='delete/kepala.php?email=<?php echo $data['email']; ?>' class='btn btn-danger '><i class="fas fa-trash"></i></a>
                                 </td>
                             </tr>
 

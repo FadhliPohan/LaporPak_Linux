@@ -16,7 +16,7 @@ if ($idrole == 4) {
     echo "<script>location.href='../staff/index.php'</script>";
 } elseif ($idrole == 3) {
     echo "<script>location.href='../kepala/index.php'</script>";
-} 
+}
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -117,6 +117,30 @@ if ($idrole == 4) {
 
             <!-- Heading -->
             <div class="sidebar-heading">
+                Berkas Master
+            </div>
+
+            <!-- Nav Item - Pages Collapse Menu -->
+            <li class="nav-item">
+                <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="true" aria-controls="collapseTwo">
+                    <i class="fas fa-fw fa-cog"></i>
+                    <span>Data Master</span>
+                </a>
+                <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionSidebar">
+                    <div class="bg-white py-2 collapse-inner rounded">
+                        <h6 class="collapse-header">Custom Components:</h6>
+                        <a class="collapse-item" href="buttons.html">Buttons</a>
+                        <a class="collapse-item" href="cards.html">Cards</a>
+                    </div>
+                </div>
+            </li>
+
+
+            <!-- Divider -->
+            <hr class="sidebar-divider">
+
+            <!-- Heading -->
+            <div class="sidebar-heading">
                 Berkas Laporan
             </div>
 
@@ -140,7 +164,7 @@ if ($idrole == 4) {
                 </a>
                 <div id="collapseUtilities" class="collapse" aria-labelledby="headingUtilities" data-parent="#accordionSidebar">
                     <div class="bg-white py-2 collapse-inner rounded">
-                        <h6 class="collapse-header">kreteria Laporan:</h6>
+                        <h6 class="collapse-header">kriteria Laporan:</h6>
                         <a class="collapse-item <?php if ($page == "semua") echo "active"; ?>" href="laporan-semua.php">Semua Laporan</a>
                         <!-- <a class="collapse-item <?php if ($page == "hari") echo "active"; ?>" href="laporan-harian.php">Laporan Harian</a>
                         <a class="collapse-item <?php if ($page == "minggu") echo "active"; ?>" href="laporan-mingguan.php">Laporan Mingguan</a>
@@ -334,8 +358,8 @@ if ($idrole == 4) {
                         <!-- Nav Item - User Information -->
                         <li class="nav-item dropdown no-arrow">
                             <a class="nav-link dropdown-toggle" href="#" id="userDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                            <span class="mr-2 d-none d-lg-inline text-gray-600 small"><?=$email?></span>
-                                <img class="img-profile rounded-circle" src="../assets/img/foto/<?=$foto?>">
+                                <span class="mr-2 d-none d-lg-inline text-gray-600 small"><?= $email ?></span>
+                                <img class="img-profile rounded-circle" src="../assets/img/foto/<?= $foto ?>">
                             </a>
                             <!-- Dropdown - User Information -->
                             <div class="dropdown-menu dropdown-menu-right shadow animated--grow-in" aria-labelledby="userDropdown">
