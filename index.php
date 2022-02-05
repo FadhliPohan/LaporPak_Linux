@@ -147,7 +147,7 @@
 
         <div class="section-title" data-aos="zoom-out">
           <h2>Tentang</h2>
-          <p>Profil Kami ?/p>
+          <p>Profil Kami </p>
         </div>
 
         <div class="row content" data-aos="fade-up">
@@ -192,13 +192,13 @@
           <li class="nav-item col-3" data-aos="zoom-in" data-aos-delay="200">
             <a class="nav-link" data-bs-toggle="tab" href="#tab-3">
               <i class="ri-sun-line"></i>
-              <h4 class="d-none d-lg-block">Struktur Organisasi</h4>
+              <h4 class="d-none d-lg-block">16 Program Prioritas Kapolri</h4>
             </a>
           </li>
           <li class="nav-item col-3" data-aos="zoom-in" data-aos-delay="300">
             <a class="nav-link" data-bs-toggle="tab" href="#tab-4">
               <i class="ri-store-line"></i>
-              <h4 class="d-none d-lg-block">Motto/Maklumat Pelayanaan</h4>
+              <h4 class="d-none d-lg-block">Program 100 hari kerja Kapolri</h4>
             </a>
           </li>
         </ul>
@@ -207,14 +207,13 @@
           <div class="tab-pane active show" id="tab-1">
             <div class="row">
               <div class="col-lg-6 order-2 order-lg-1 mt-3 mt-lg-0">
-                <h3>Voluptatem dignissimos provident quasi corporis voluptates sit assumenda.</h3>
-                <p class="fst-italic">
-                  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore
-                  magna aliqua.
+                <h3>Profil Dinas Kapolsek Talang Kelapa</h3>
+                <p>
+                  Adapun profil Dinas Kapolsek Talang kepala antara lain sebagai berikut :
                 </p>
                 <ul>
-                  <li><i class="ri-check-double-line"></i> Ullamco laboris nisi ut aliquip ex ea commodo consequat.</li>
-                  <li><i class="ri-check-double-line"></i> Duis aute irure dolor in reprehenderit in voluptate velit.</li>
+                  <li><i class="ri-check-double-line"></i> lokasi terletak di : Jl. Palembang - Jambi No.25, Sukamoro, Talang Klp., Kabupaten Banyu Asin, Sumatera Selatan 30961</li>
+                  <li><i class="ri-check-double-line"></i> Dipimpin Oleh HARIS MUNANDAR HASYIM, SH, S.IK dengan jabatan KOMPOL</li>
                   <li><i class="ri-check-double-line"></i> Ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate trideta storacalaperda mastiro dolore eu fugiat nulla pariatur.</li>
                 </ul>
                 <p>
@@ -231,21 +230,24 @@
           <div class="tab-pane" id="tab-2">
             <div class="row">
               <div class="col-lg-6 order-2 order-lg-1 mt-3 mt-lg-0">
-                <h3>Neque exercitationem debitis soluta quos debitis quo mollitia officia est</h3>
+                <h3>Visi Kapolri</h3>
                 <p>
-                  Ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate
-                  velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in
-                  culpa qui officia deserunt mollit anim id est laborum
+                  Terwujudnya pelayanan keamanan dan ketertiban masyarakat yang prima, tegaknya hukum dan keamanan dalam negeri yang mantap serta terjalinnya sinergi polisional yang proaktif.
                 </p>
+                <h3>Misi Kapolri</h3>
                 <p class="fst-italic">
-                  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore
-                  magna aliqua.
+                  Adapun beberapa misi kapolri dalam menjalankan tugas dan fungsinya antaralain adalah :
                 </p>
                 <ul>
-                  <li><i class="ri-check-double-line"></i> Ullamco laboris nisi ut aliquip ex ea commodo consequat.</li>
-                  <li><i class="ri-check-double-line"></i> Duis aute irure dolor in reprehenderit in voluptate velit.</li>
-                  <li><i class="ri-check-double-line"></i> Provident mollitia neque rerum asperiores dolores quos qui a. Ipsum neque dolor voluptate nisi sed.</li>
-                  <li><i class="ri-check-double-line"></i> Ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate trideta storacalaperda mastiro dolore eu fugiat nulla pariatur.</li>
+                  <li><i class="ri-check-double-line"></i> Melaksanakan deteksi dini dan peringatan dini melalui kegiatan/operasi penyelidikan, pengamanan dan penggalangan;</li>
+                  <li><i class="ri-check-double-line"></i> Memberikan perlindungan, pengayoman dan pelayanan secara mudah, responsif dan tidak diskriminatif;</li>
+                  <li><i class="ri-check-double-line"></i> PMenjaga keamanan, ketertiban dan kelancaran lalu lintas untuk menjamin keselamatan dan kelancaran arus orang dan barang;</li>
+                  <li><i class="ri-check-double-line"></i> Menjamin keberhasilan penanggulangan gangguan keamanan dalam negeri;</li>
+                  <li><i class="ri-check-double-line"></i> Mengembangkan perpolisian masyarakat yang berbasis pada masyarakat patuh hukum;</li>
+                  <li><i class="ri-check-double-line"></i> Menegakkan hukum secara profesional, objektif, proporsional, transparan dan akuntabel untuk menjamin kepastian hukum dan rasa keadilan;</li>
+                  <li><i class="ri-check-double-line"></i> Mengelola secara profesional, transparan, akuntabel dan modern seluruh sumber daya Polri guna mendukung operasional tugas Polri;</li>
+                  <li><i class="ri-check-double-line"></i> Membangun sistem sinergi polisional interdepartemen dan lembaga internasional maupun komponen masyarakat dalam rangka membangun kemitraan dan jejaring kerja (partnership building/networking).</li>
+
                 </ul>
               </div>
               <div class="col-lg-6 order-1 order-lg-2 text-center">
@@ -256,21 +258,29 @@
           <div class="tab-pane" id="tab-3">
             <div class="row">
               <div class="col-lg-6 order-2 order-lg-1 mt-3 mt-lg-0">
-                <h3>Voluptatibus commodi ut accusamus ea repudiandae ut autem dolor ut assumenda</h3>
+                <h3>16 Program Prioritas Kapolri,</h3>
                 <p>
-                  Ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate
-                  velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in
-                  culpa qui officia deserunt mollit anim id est laborum
+                  Program prioritas Kapolri yang disebut “Presisi” yakni Prediktif, Responsibilitas, Transparansi Berkeadilan dengan bertujuan menata kelembagaan, perubahan sistem dan metode organisasi, menjadikan sumber daya manusia (SDM) Polri yang unggul di era police 4.0, antara lain 16 program prioritas Kapolri adalah :
                 </p>
                 <ul>
-                  <li><i class="ri-check-double-line"></i> Ullamco laboris nisi ut aliquip ex ea commodo consequat.</li>
-                  <li><i class="ri-check-double-line"></i> Duis aute irure dolor in reprehenderit in voluptate velit.</li>
-                  <li><i class="ri-check-double-line"></i> Provident mollitia neque rerum asperiores dolores quos qui a. Ipsum neque dolor voluptate nisi sed.</li>
+                  <li><i class="ri-check-double-line"></i> Penataan Kelembagaan</li>
+                  <li><i class="ri-check-double-line"></i> Perubahan Sistem dan Metode Organisasi</li>
+                  <li><i class="ri-check-double-line"></i> Menjadikan SDM Polri yang Unggul di Era Police 4.0</li>
+                  <li><i class="ri-check-double-line"></i> Perubahan Teknologi Kepolisian Modern di Era Police 4.0</li>
+                  <li><i class="ri-check-double-line"></i> Pemantapan Kinerja Pemeliharaan Kamtibmas</li>
+                  <li><i class="ri-check-double-line"></i> Peningkatan Kinerja Penegakan Hukum</li>
+                  <li><i class="ri-check-double-line"></i> Pemantapan Dukungan Polri dalam Penanganan Covid-19</li>
+                  <li><i class="ri-check-double-line"></i> Pemulihan Ekonomi Nasional</li>
+                  <li><i class="ri-check-double-line"></i> Menjamin Keamanan Program Prioritas Nasional</li>
+                  <li><i class="ri-check-double-line"></i> Penguatan Penanganan Konflik Sosial</li>
+                  <li><i class="ri-check-double-line"></i> Peningkatan Kualitas Pelayanan Publik Polri</li>
+                  <li><i class="ri-check-double-line"></i> Mewujudkan Pelayanan Publik Polri yang Terintegrasi</li>
+                  <li><i class="ri-check-double-line"></i> Pemantapan Komunikasi Publik</li>
+                  <li><i class="ri-check-double-line"></i> Pengawasan Pimpinan Terhadap Setiap Kegiatan</li>
+                  <li><i class="ri-check-double-line"></i> PPenguatan Fungsi Pengawasan</li>
+                  <li><i class="ri-check-double-line"></i> Pengawasan oleh Masyarakat Pencari Keadilan (Public Complain)</li>
                 </ul>
-                <p class="fst-italic">
-                  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore
-                  magna aliqua.
-                </p>
+
               </div>
               <div class="col-lg-6 order-1 order-lg-2 text-center">
                 <img src="assets/img/features-3.png" alt="" class="img-fluid">
@@ -280,20 +290,29 @@
           <div class="tab-pane" id="tab-4">
             <div class="row">
               <div class="col-lg-6 order-2 order-lg-1 mt-3 mt-lg-0">
-                <h3>Omnis fugiat ea explicabo sunt dolorum asperiores sequi inventore rerum</h3>
+                <h3> Program 100 hari kerja Kapolri
+                </h3>
                 <p>
-                  Ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate
-                  velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in
-                  culpa qui officia deserunt mollit anim id est laborum
+                  Dalam arahannya, Kapolri memberikan penekanan dalam program 100 hari kerja, dimana ia berharap dalam pelaksanaannya program ini segera terwujud dalam jangka tersebut.
                 </p>
-                <p class="fst-italic">
-                  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore
-                  magna aliqua.
-                </p>
+
                 <ul>
-                  <li><i class="ri-check-double-line"></i> Ullamco laboris nisi ut aliquip ex ea commodo consequat.</li>
-                  <li><i class="ri-check-double-line"></i> Duis aute irure dolor in reprehenderit in voluptate velit.</li>
-                  <li><i class="ri-check-double-line"></i> Ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate trideta storacalaperda mastiro dolore eu fugiat nulla pariatur.</li>
+                  <li><i class="ri-check-double-line"></i> Tingkatkan kesejahteraan personel melalui program perumahan dan kesehatan</li>
+                  <li><i class="ri-check-double-line"></i> Laksanakan sistem point dalam pembinaan karier personel sehingga semua anggota dapat kesempatan dan panggung yang sama sesuai prestasi yang dimiliki</li>
+                  <li><i class="ri-check-double-line"></i> Tingkatkan sinergitas TNI-Polri melalui kegiatan bersama sampai pada level pelaksanaan</li>
+                  <li><i class="ri-check-double-line"></i> Minimalisir komplain masyarakat terkait pelayanan kepolisian</li>
+                  <li><i class="ri-check-double-line"></i> Segera berlakukan layanan kepolisian dengan nomor tunggal 110 yang terkoneksi dengan command center</li>
+                  <li><i class="ri-check-double-line"></i> Layanan publik yang cepat, mudah, dan terukur berbasis teknologi informasi agar segera direalisasikan dalam pelayanan SIM, STNK dan SKCK</li>
+                  <li><i class="ri-check-double-line"></i> Segera persiapkan sarana dan prasarana bagi masyarakat kelompok rentan dan berkebutuhan khusus di tingkat Polres dan Polsek</li>
+                  <li><i class="ri-check-double-line"></i> Maksimalkan rekrutmen proaktif, penambahan kuota pada daaerah yang belum ada bhabinkamtibmas dan bakomsus (Teknologi informasi dan Kesehatan)</li>
+                  <li><i class="ri-check-double-line"></i> Transformasi polsek sebagai basis resolusi harus sudah berjalan dan realisasikan bhabinkamtibmas sebagai pusat informasi dan problem solver</li>
+                  <li><i class="ri-check-double-line"></i> Segera bentuk virtual police yang berperan sebagai sarana edukasi kepada masyarakat dalam pemanfaatan media sosial pada ruang siber</li>
+                  <li><i class="ri-check-double-line"></i> Laksanakan perluasan ETLE, bagi wilayah yang belum bisa menerapkan ETLE lakukan proses tilang sesuai prosedur. Tidak ada istilah titip sidang dan awasi pelaksanaannya secara penuh</li>
+                  <li><i class="ri-check-double-line"></i> Percepat penyelesaian penanganan kasus-kasus yang menjadi perhatian publik</li>
+                  <li><i class="ri-check-double-line"></i> Tingkatkan dan kembangkan program kampung tangguh untuk penanganan covid di seluruh daerah</li>
+                  <li><i class="ri-check-double-line"></i> Lakukan pendampingan pada setiap program permerintah terkait pemulihan ekonomi nasional</li>
+
+
                 </ul>
               </div>
               <div class="col-lg-6 order-1 order-lg-2 text-center">
@@ -313,7 +332,7 @@
         <div class="row" data-aos="zoom-out">
           <div class="col-lg-9 text-center text-lg-start">
             <h3>Mulai Melaporkan</h3>
-            <p> Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+            <p> Anda dapat melakukan Pelaporan dan setiap Laporan Yang anda sampaikan akan kami jaga kerahasiaannya.</p>
           </div>
           <div class="col-lg-3 cta-btn-container text-center">
             <a class="cta-btn align-middle" href="#">LAPOR</a>
@@ -500,7 +519,7 @@
       <div class="container">
 
         <div class="section-title" data-aos="zoom-out">
-          <h2>Testimonials</h2>
+          <h2>Tentang</h2>
           <p>Apa yang Mereka Bicarakan tentang Kami</p>
         </div>
 
@@ -511,12 +530,12 @@
               <div class="testimonial-item">
                 <p>
                   <i class="bx bxs-quote-alt-left quote-icon-left"></i>
-                  Proin iaculis purus consequat sem cure digni ssim donec porttitora entum suscipit rhoncus. Accusantium quam, ultricies eget id, aliquam eget nibh et. Maecen aliquam, risus at semper.
+                  Dengan website ini saya lebih mudah dalam membuat aduan tanpa harus ke kapolsek dulu.
                   <i class="bx bxs-quote-alt-right quote-icon-right"></i>
                 </p>
                 <img src="assets/img/testimonials/testimonials-1.jpg" class="testimonial-img" alt="">
                 <h3>Saul Goodman</h3>
-                <h4>Ceo &amp; Founder</h4>
+                <h4>Petani</h4>
               </div>
             </div><!-- End testimonial item -->
 
@@ -524,7 +543,7 @@
               <div class="testimonial-item">
                 <p>
                   <i class="bx bxs-quote-alt-left quote-icon-left"></i>
-                  Export tempor illum tamen malis malis eram quae irure esse labore quem cillum quid cillum eram malis quorum velit fore eram velit sunt aliqua noster fugiat irure amet legam anim culpa.
+                  website ini sangat membantu saya dalam membuat aduan, tetap semangat PREESISI Kapolsek Talang Kelapa :)
                   <i class="bx bxs-quote-alt-right quote-icon-right"></i>
                 </p>
                 <img src="assets/img/testimonials/testimonials-2.jpg" class="testimonial-img" alt="">
@@ -537,12 +556,12 @@
               <div class="testimonial-item">
                 <p>
                   <i class="bx bxs-quote-alt-left quote-icon-left"></i>
-                  Enim nisi quem export duis labore cillum quae magna enim sint quorum nulla quem veniam duis minim tempor labore quem eram duis noster aute amet eram fore quis sint minim.
+                  Dapat melakukan tracing pada website ini merupakan cara termudah mengetahui progres aduan kita.
                   <i class="bx bxs-quote-alt-right quote-icon-right"></i>
                 </p>
                 <img src="assets/img/testimonials/testimonials-3.jpg" class="testimonial-img" alt="">
                 <h3>Jena Karlis</h3>
-                <h4>Store Owner</h4>
+                <h4>Wiraswasta</h4>
               </div>
             </div><!-- End testimonial item -->
 
@@ -550,7 +569,7 @@
               <div class="testimonial-item">
                 <p>
                   <i class="bx bxs-quote-alt-left quote-icon-left"></i>
-                  Fugiat enim eram quae cillum dolore dolor amet nulla culpa multos export minim fugiat minim velit minim dolor enim duis veniam ipsum anim magna sunt elit fore quem dolore labore illum veniam.
+                  Lebih aktif lagi Kapolsek Talang kelapa, GO, GO, GO.
                   <i class="bx bxs-quote-alt-right quote-icon-right"></i>
                 </p>
                 <img src="assets/img/testimonials/testimonials-4.jpg" class="testimonial-img" alt="">
@@ -563,12 +582,12 @@
               <div class="testimonial-item">
                 <p>
                   <i class="bx bxs-quote-alt-left quote-icon-left"></i>
-                  Quis quorum aliqua sint quem legam fore sunt eram irure aliqua veniam tempor noster veniam enim culpa labore duis sunt culpa nulla illum cillum fugiat legam esse veniam culpa fore nisi cillum quid.
+                  Keran, sekarang saya bisa melihat aduan yang saya buat sudah sampai mana pengerjaanya, tetap jaya kapolsek talang kelapa.
                   <i class="bx bxs-quote-alt-right quote-icon-right"></i>
                 </p>
                 <img src="assets/img/testimonials/testimonials-5.jpg" class="testimonial-img" alt="">
                 <h3>John Larson</h3>
-                <h4>Entrepreneur</h4>
+                <h4>Pelaut</h4>
               </div>
             </div><!-- End testimonial item -->
 
@@ -844,7 +863,7 @@
               <div class="email">
                 <i class="bi bi-envelope"></i>
                 <h4>Email:</h4>
-                <p>Kepolisian.com</p>
+                <p>polsektalangkelapa@gmail.com</p>
               </div>
 
               <div class="phone">
@@ -894,17 +913,16 @@
   <!-- ======= Footer ======= -->
   <footer id="footer">
     <div class="container">
-      <h3>Kepolisian</h3>
-      <p>Membverikan pelayanaan terbaik kepada masyarakat.</p>
+      <h3>POLSEK TALANG KELAPA</h3>
+      <p>Terwujudnya pelayanan keamanan dan ketertiban masyarakat yang prima, tegaknya hukum dan keamanan dalam negeri yang mantap serta terjalinnya sinergi polisional yang proaktif.</p>
       <div class="social-links">
-        <a href="#" class="twitter"><i class="bx bxl-twitter"></i></a>
-        <a href="#" class="facebook"><i class="bx bxl-facebook"></i></a>
-        <a href="#" class="instagram"><i class="bx bxl-instagram"></i></a>
-        <a href="#" class="google-plus"><i class="bx bxl-skype"></i></a>
-        <a href="#" class="linkedin"><i class="bx bxl-linkedin"></i></a>
+
+        <a href="https://web.facebook.com/polsek.talangkelapa" class="facebook"><i class="bx bxl-facebook"></i></a>
+        <a href="https://www.instagram.com/polsek_talang_kelapa/" class="instagram"><i class="bx bxl-instagram"></i></a>
+
       </div>
       <div class="copyright">
-        &copy; Copyright <strong><span>Kepolisian</span></strong>. All Rights Reserved
+        &copy; Copyright <strong><span>POLSEK TALANG KELAPA</span></strong>. All Rights Reserved
       </div>
       <div class="credits">
         <!-- All the links in the footer should remain intact. -->

@@ -72,7 +72,7 @@ include 'header.php';
                                 <td><?= $data['jenis_kelamin'] ?></td>
                                 <td><?= $data['pekerjaan'] ?></td>
                                 <td><?= $data['alamat'] ?></td>
-                                <td><a href='form-update-user.php?emailku=<?php echo $data['email']; ?>' class='btn btn-warning '><i class="bi bi-pen"></i></a>
+                                <td><a href='form-update-user.php?emailku=<?php echo $data['email']; ?>' class='btn btn-warning '><i class="fas fa-pen"></i></a>
                                 </td>
                                 <td><a href='delete/user.php?email=<?php echo $data['email']; ?>' class='btn btn-danger '><i class="fas fa-trash"></i></a>
                                 </td>

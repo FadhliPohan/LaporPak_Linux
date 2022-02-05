@@ -42,7 +42,7 @@ $idrole = '3';
 $sql1 = "INSERT into admin SET email='$email', password='$pass',id_role='$idrole',slug='$slug'";
 
 
-$sql2          = "insert into user SET email='$email',nama= '$nama',jenis_kelamin = '$jenis_kelamin',nik='$nik',alamat='$alamat',tmp_lahir= '$tmp_lahir',no_tlp = '$notlp',agama='$agama',tgl_lahir = '$tgl_lahir',pekerjaan='$pekerjaan',foto='$file_name'";
+$sql2 = "insert into user SET email='$email',nama= '$nama',jenis_kelamin = '$jenis_kelamin',nik='$nik',alamat='$alamat',tmp_lahir= '$tmp_lahir',no_tlp = '$notlp',agama='$agama',tgl_lahir = '$tgl_lahir',pekerjaan='$pekerjaan',foto='$file_name'";
 
 // perintah untuk mengeksekusi query di atas
 $insert1     = mysqli_query($konek, $sql1);

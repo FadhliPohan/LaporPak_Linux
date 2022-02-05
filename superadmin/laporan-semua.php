@@ -53,7 +53,7 @@ include 'header.php';
 
             </div>
             <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
-                <thead>
+                <thead style="background-color: #3f65d4; color: #FFFFFF;">
                     <tr>
                         <th>No</th>
                         <th>Nama</th>
@@ -62,7 +62,8 @@ include 'header.php';
                         <th>Tanggal Kejadian</th>
                         <th>Tanggal laporan</th>
                         <th>Bukti</th>
-                        <th>Aksi</th>
+                        <th>Edit</th>
+                        <th>Hapus</th>
                     </tr>
                 <tfoot>
                     <tr>
@@ -73,7 +74,8 @@ include 'header.php';
                         <th>Jenis Kelamin</th>
                         <th>Pekerjaan</th>
                         <th>Alamat</th>
-                        <th>Aksi</th>
+                        <th>Edit</th>
+                        <th>Hapus</th>
                     </tr>
                 </tfoot>
                 <tbody>
@@ -107,8 +109,9 @@ include 'header.php';
                             <td><?= $data['tanggal_kejadian'] ?></td>
                             <td><?= $data['tanggal'] ?></td>
                             <td><?= $data['lampiran_bukti'] ?></td>
-                            <td><a href='edit/form-update-laporan.php?no_tiket=<?php echo $data['no_tiket']; ?>' class='btn btn-info btn-circle'><i class="fas fa-info-circle"></i></a>
-                                <a href='delete/laporan.php?no_tiket=<?php echo $data['no_tiket']; ?>' class='btn btn-danger btn-circle'><i class="fas fa-trash"></i></a>
+                            <td><a href='form-update-laporan.php?no_tiket=<?php echo $data['no_tiket']; ?>' class='btn btn-warning '><i class="fas fa-pen"></i></a>
+                            </td>
+                            <td><a href='delete/laporan.php?no_tiket=<?php echo $data['no_tiket']; ?>' class='btn btn-danger '><i class="fas fa-trash"></i></a>
                             </td>
                         </tr>
 

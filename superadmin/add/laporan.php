@@ -6,10 +6,13 @@ $no_tiket         = $_POST['no_tiket'];
 $judul_laporan    = $_POST['judul_laporan'];
 $isi_laporan      = $_POST['isi_laporan'];
 $tanggal_kejadian = $_POST['tanggal_kejadian'];
+$lokasi_kejadian  = $_POST['lokasi_kejadian'];
+$saksi            = $_POST['saksi'];
 $lapiran_bukti    = $_POST['lapiran_bukti'];
 
 
-include '../koneksi.php';
+
+include '../../koneksi.php';
 
 // upload cover
 $file_name      = $_FILES['foto']['name'];
@@ -17,10 +20,13 @@ $file_tmp       = $_FILES['foto']['tmp_name'];
 move_uploaded_file($file_tmp, "../../assets/img/foto/" . $file_name);
 
 // sintaks sql untuk insert data
-$sql              = "insert into tbl_materi SET id='$id',title= '$title',category='$category',
-    url           = '$url',urlToImage='$urlToImage'";
+$sql            = "insert into detail_laporan SET email='$email',nama= '$nama',jenis_kelamin = '$jenis_kelamin',nik='$nik',alamat='$alamat',tmp_lahir= '$tmp_lahir',no_tlp = '$notlp',agama='$agama',tgl_lahir = '$tgl_lahir',pekerjaan='$pekerjaan',foto='$file_name'";
+
+$sql1            = "insert into detail_laporan SET email='$email',nama= '$nama',jenis_kelamin = '$jenis_kelamin',nik='$nik',alamat='$alamat',tmp_lahir= '$tmp_lahir',no_tlp = '$notlp',agama='$agama',tgl_lahir = '$tgl_lahir',pekerjaan='$pekerjaan',foto='$file_name'";
+
 // perintah untuk mengeksekusi query di atas
-$insert           = mysqli_query($konek, $sql);
+$insert         = mysqli_query($konek, $sql);
+$insert1         = mysqli_query($konek, $sql1);
 /*
 if($insert){
     echo "insert data berhasil";

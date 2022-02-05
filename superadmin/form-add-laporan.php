@@ -25,7 +25,7 @@ function create_random($length)
         </div>
         <div class="card-body">
 
-            <form action="" method="post">
+            <form action="add/laporan.php" method="post">
                 <div class="form-group row">
                     <label for="NID" class="col-sm-2 col-form-label">No.Tiket</label>
                     <div class="col-sm-3">
