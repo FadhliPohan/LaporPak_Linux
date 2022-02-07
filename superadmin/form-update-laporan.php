@@ -2,7 +2,7 @@
 $pages = "semua";
 include 'header.php';
 $tiket = $_GET['no_tiket'];
-$tiketku = mysqli_query($konek, "SELECT d.*, k.*, u.* FROM detail_laporan d JOIN user u JOIN klasifikasi k WHERE d.no_tiket = 'e324dafd' and u.id_user = d.id_user and k.id_klasifikasi = d.id_klasifikasi");
+$tiketku = mysqli_query($konek, "SELECT d.*, k.*, u.* FROM detail_laporan d JOIN user u JOIN klasifikasi k WHERE d.no_tiket = '$tiket' and u.id_user = d.id_user and k.id_klasifikasi = d.id_klasifikasi");
 $row = mysqli_fetch_array($tiketku);
 
 
@@ -43,15 +43,16 @@ $row = mysqli_fetch_array($tiketku);
                             </option>
 
                             <?php
-                            $category = mysqli_query($konek, "select * from klasifikasi");
+                            $category = mysqli_query($konek, "SELECT d.*, k.*, u.* FROM detail_laporan d JOIN user u JOIN klasifikasi k WHERE d.no_tiket = '$tiket' and u.id_user = d.id_user and k.id_klasifikasi = d.id_klasifikasi");
                             while ($p = mysqli_fetch_array($category)) {
                                 echo "<option value='$p[nama_masalah]' ";
-                                if ($row['id_klarifikasi'] == $p['id_klarifikasi']) {
+                                if ($row['id_klarifikasi'] == $p['nama_masalah']) {
                                     echo "selected";
                                 }
                                 echo ">$p[nama_masalah]</option>";
                             }
                             ?>
+                            
 
 
                         </select>

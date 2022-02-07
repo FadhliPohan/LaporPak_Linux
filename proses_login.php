@@ -7,7 +7,7 @@ $password   = $_POST['password'];
 include 'koneksi.php';
 // perintah SQL untuk chek data ke database
 // $sql  = "select * from admin where email='$email'";
-$sql ="SELECT a.*, r.*, u.* FROM admin a JOIN role r JOIN user u WHERE a.email = '$email' AND a.id_role = r.id_role AND a.email = u.email;";
+$sql = "SELECT a.*, r.*, u.* FROM admin a JOIN role r JOIN user u WHERE a.email = '$email' AND a.id_role = r.id_role AND a.email = u.email;";
 $user = mysqli_query($konek, $sql);
 
 // menghitung jumlah data yang ketemu
@@ -23,6 +23,7 @@ if (mysqli_num_rows($user) > 0) {
         $_SESSION['id_role']   = $userData['id_role'];
         $_SESSION['slug']   = $userData['slug'];
         $_SESSION['foto']   = $userData['foto'];
+        $_SESSION['id_user']   = $userData['id_user'];
 
         if ($userData['id_role'] == 1) {
             echo "<script>alert('Anda Telah Login Sebagai Super Admin');location.href='superadmin/index.php'</script>";

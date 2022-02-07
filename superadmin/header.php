@@ -9,6 +9,7 @@ $id = $_SESSION['slug'];
 $email = $_SESSION['email'];
 $idrole = $_SESSION['id_role'];
 $foto = $_SESSION['foto'];
+$id_user = $_SESSION['id_user'];
 
 if ($idrole == 4) {
     echo "<script>location.href='../user'</script>";
@@ -121,16 +122,22 @@ if ($idrole == 4) {
             </div>
 
             <!-- Nav Item - Pages Collapse Menu -->
-            <li class="nav-item">
+            <li class="nav-item <?php if ($page == "klasifikasi") {
+                                    echo "active";
+                                } elseif ($page == "status") {
+                                    echo "active";
+                                } else {
+                                    echo "";
+                                } ?>">
                 <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="true" aria-controls="collapseTwo">
                     <i class="fas fa-fw fa-cog"></i>
                     <span>Data Master</span>
                 </a>
                 <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionSidebar">
                     <div class="bg-white py-2 collapse-inner rounded">
-                        <h6 class="collapse-header">Custom Components:</h6>
-                        <a class="collapse-item" href="buttons.html">Buttons</a>
-                        <a class="collapse-item" href="cards.html">Cards</a>
+                        <h6 class="collapse-header">Data Master:</h6>
+                        <a class="collapse-item <?php if ($page == "klasifikasi") echo "active"; ?>" href="tbl_klasifikasi.php">Klasifikasi</a>
+                        <a class="collapse-item <?php if ($page == "status") echo "active"; ?>" href="tbl_status.php">Status</a>
                     </div>
                 </div>
             </li>

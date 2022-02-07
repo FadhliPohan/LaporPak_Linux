@@ -125,7 +125,7 @@ include 'header.php';
                     </div>
                 </div>
                 <div class="form-actions">
-                    <a href="tbl_staff.php" class="btn btn-info mt-2"><i class="fas fa-fw fa-arrow-left"></i> Kembali</a>
+                    <button href="tbl_staff.php" class="btn btn-info mt-2"><i class="fas fa-fw fa-arrow-left"></i> Kembali</a>
                     <button type="submit" class="btn btn-success mt-2"> <i class="fa fa-check"></i> Simpan</button>
                     <button type="reset" class="btn btn-danger mt-2"><i class="fa fa-times"></i> Hapus</button>
                 </div>
