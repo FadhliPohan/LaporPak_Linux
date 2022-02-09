@@ -1,5 +1,5 @@
 <?php
-$page = "stasus";
+$page = "status";
 include 'header.php';
 ?>
 <!-- Begin Page Content -->
@@ -25,8 +25,8 @@ include 'header.php';
                     <thead style="background-color: #3f65d4; color: #FFFFFF;">
                         <tr>
                             <th>No</th>
-                            <th>Jenis Klasifikasi</th>
-                            <th>Deskripsi</th>
+                            <th>Jenis Status Pengerjaan</th>
+                            <th>Deskripsi Status</th>
                             <th>Edit</th>
                             <th>Hapus</th>
                         </tr>
@@ -34,8 +34,8 @@ include 'header.php';
                     <tfoot>
                         <tr>
                             <th>No</th>
-                            <th>Jenis Klasifikasi</th>
-                            <th>Deskripsi</th>
+                            <th>Jenis Status Pengerjaan</th>
+                            <th>Deskripsi Status</th>
 
                             <th>Edit</th>
                             <th>Hapus</th>
@@ -63,7 +63,7 @@ include 'header.php';
                                 <td><?= $data['deskripsi_status'] ?></td>
                                 <td><a href='form-update-status.php?statusku=<?php echo $data['id_status']; ?>' class='btn btn-warning '><i class="fas fa-pen"></i></a>
                                 </td>
-                                <td><a href='delete/status.php?status=<?php echo $data['id_status']; ?>' class='btn btn-danger '><i class="fas fa-trash"></i></a>
+                                <td><a href='delete/status.php?statusku=<?php echo $data['id_status']; ?>' class='btn btn-danger '><i class="fas fa-trash"></i></a>
                                 </td>
                             </tr>
 

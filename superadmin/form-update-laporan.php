@@ -19,7 +19,7 @@ $row = mysqli_fetch_array($tiketku);
         </div>
         <div class="card-body">
 
-            <form action="" method="post">
+            <form action="update/laporan.php" method="post">
                 <div class="form-group row">
                     <label for="no_tiket" class="col-sm-2 col-form-label">No.Tiket</label>
                     <div class="col-sm-3">
@@ -52,7 +52,7 @@ $row = mysqli_fetch_array($tiketku);
                                 echo ">$p[nama_masalah]</option>";
                             }
                             ?>
-                            
+
 
 
                         </select>
@@ -84,7 +84,7 @@ $row = mysqli_fetch_array($tiketku);
                 <div class="form-group row">
                     <label for="Deskripsi" class="col-sm-2 col-form-label">Deskripsi Kejadian</label>
                     <div class="col-sm-10">
-                        <textarea rows="6" name="deskripsi" class="form-control" id="Deskripsi" placeholder="Harap isikan alur kejadian dengan lengkap!" value="<?php echo $row['nama_masalah'] ?>"></textarea>
+                        <textarea rows="6" name="deskripsi" class="form-control" id="Deskripsi" placeholder="Harap isikan alur kejadian dengan lengkap!" value=""> <?php echo $row['isi_laporan'] ?></textarea>
 
                     </div>
                 </div>
