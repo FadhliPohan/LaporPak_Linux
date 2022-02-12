@@ -21,7 +21,7 @@ include 'header.php';
         <div class="card-body">
             <div class="table-responsive table-striped">
                 <div class="d-flex justify-content-between">
-                    <a class="btn btn-success w-15 " href="form-add-laporan.php">Tambah User <i class="fas fa-fw fa-plus-circle"></i>
+                    <a class="btn btn-success w-15 " href="form-add-laporan.php">Tambah Laporan Aduan<i class="fas fa-fw fa-plus-circle"></i>
                         <!-- <span class="spinner-border spinner-border-sm"></span> -->
                     </a>
                     <a class="btn btn-danger w-15 " href="">Export To PDF <i class="fas fa-fw fa-file-pdf"></i>

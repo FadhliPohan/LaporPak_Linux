@@ -39,24 +39,24 @@
 </div>
 
 <!-- Bootstrap core JavaScript-->
-<script src="../Boostrap/vendor/jquery/jquery.min.js"></script>
-<script src="../Boostrap/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+<script src="../Boostrap/boostrap/vendor/jquery/jquery.min.js"></script>
+<script src="../Boostrap/boostrap/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
 
 <!-- Core plugin JavaScript-->
-<script src="../Boostrap/vendor/jquery-easing/jquery.easing.min.js"></script>
+<script src="../Boostrap/boostrap/vendor/jquery-easing/jquery.easing.min.js"></script>
 
 <!-- Custom scripts for all pages-->
-<script src="../Boostrap/js/sb-admin-2.min.js"></script>
+<script src="../Boostrap/boostrap/js/sb-admin-2.min.js"></script>
 
 <!-- Page level plugins -->
-<script src="../Boostrap/vendor/chart.js/Chart.min.js"></script>
-<script src="../Boostrap/vendor/datatables/jquery.dataTables.min.js"></script>
-<script src="../Boostrap/vendor/datatables/dataTables.bootstrap4.min.js"></script>
+<script src="../Boostrap/boostrap/vendor/chart.js/Chart.min.js"></script>
+<script src="../Boostrap/boostrap/vendor/datatables/jquery.dataTables.min.js"></script>
+<script src="../Boostrap/boostrap/vendor/datatables/dataTables.bootstrap4.min.js"></script>
 
 <!-- Page level custom scripts -->
-<script src="../Boostrap/js/demo/chart-area-demo.js"></script>
-<script src="../Boostrap/js/demo/chart-pie-demo.js"></script>
-<script src="../Boostrap/js/demo/datatables-demo.js"></script>
+<script src="../Boostrap/boostrap/js/demo/chart-area-demo.js"></script>
+<script src="../Boostrap/boostrap/js/demo/chart-pie-demo.js"></script>
+<script src="../Boostrap/boostrap/js/demo/datatables-demo.js"></script>
 
 
 

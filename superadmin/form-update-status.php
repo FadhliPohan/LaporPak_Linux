@@ -31,7 +31,7 @@ $row = mysqli_fetch_array($statusku);
                 <div class="form-group row">
                     <label for="deskripsi" class="col-sm-2 col-form-label">Deskripsi status</label>
                     <div class="col-sm-10">
-                        <textarea rows="6" name="deskripsi" class="form-control" id="Deskripsi" placeholder="Harap isikan alur kejadian dengan lengkap!" value=""> <?php echo $row['deskripsi_status'] ?></textarea>
+                        <textarea rows="6" name="deskripsi_status" class="form-control" id="Deskripsi" placeholder="Harap isikan alur kejadian dengan lengkap!"> <?php echo $row['deskripsi_status'] ?></textarea>
 
                     </div>
                 </div>

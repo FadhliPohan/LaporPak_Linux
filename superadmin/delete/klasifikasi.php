@@ -1,8 +1,8 @@
 <?php
 include "../../koneksi.php";
 
-$id = $_GET['klasifikasiku'];
-$status = mysqli_query($konek, "DELETE from status where id_klasifikasi='$id'");
+$id = $_GET['klasifikasi'];
+$status = mysqli_query($konek, "DELETE from klasifikasi where id_klasifikasi='$id'");
 
 // $row  = mysqli_fetch_array($klasifikasi);
 

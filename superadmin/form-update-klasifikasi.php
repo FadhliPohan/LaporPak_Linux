@@ -19,7 +19,7 @@ $row = mysqli_fetch_array($klasifikasiku);
         <div class="card-body">
 
             <form action="update/klasifikasi.php" method="POST" enctype="multipart/form-data">
-
+                <input type="hidden" name="id_klasifikasi" value="<?php echo $id_klasifikasi; ?>">
                 <div class="form-group row">
                     <label for="JenisKlasifikasi" class="col-sm-2 col-form-label">Jenis Klasifikasi</label>
                     <div class="col-sm-10">
@@ -31,7 +31,7 @@ $row = mysqli_fetch_array($klasifikasiku);
                 <div class="form-group row">
                     <label for="deskripsi" class="col-sm-2 col-form-label">Deskripsi Klasifikasi</label>
                     <div class="col-sm-10">
-                        <textarea rows="6" name="deskripsi" class="form-control" id="Deskripsi" placeholder="Harap isikan alur kejadian dengan lengkap!" value=""> <?php echo $row['deskripsi'] ?></textarea>
+                        <textarea rows="6" name="deskripsi" class="form-control" id="Deskripsi" placeholder="Harap isikan alur kejadian dengan lengkap!"> <?php echo $row['deskripsi'] ?></textarea>
 
                     </div>
                 </div>

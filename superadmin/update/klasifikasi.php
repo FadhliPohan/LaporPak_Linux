@@ -1,13 +1,14 @@
 <?php
 include '../../koneksi.php';
+
+$id_klasifikasi     = $_POST['id_klasifikasi'];
 // menyimpan hasil inputan kedalam variabel
-$deskripsi        = $_POST['deskripsi'];
-$nama_masalah     = $_POST['nama_masalah'];
+$nama_masalah       = $_POST['nama_masalah'];
+$deskripsi          = $_POST['deskripsi'];
 
 
 
-
-$sql1 = "INSERT into klasifikasi SET nama_masalah='$nama_masalah' ,deskripsi='$deskripsi'";
+$sql1 = "UPDATE klasifikasi SET  deskripsi='$deskripsi' ,nama_masalah='$nama_masalah' WHERE id_klasifikasi='$id_klasifikasi'";
 
 
 

@@ -13,9 +13,9 @@ $foto = $_SESSION['foto'];
 
 if ($idrole == 1) {
     echo "<script>location.href='../superadmin/index.php'</script>";
-}  elseif ($idrole == 3) {
+} elseif ($idrole == 3) {
     echo "<script>location.href='../kepala/index.php'</script>";
-} elseif ($idrole == 4){
+} elseif ($idrole == 4) {
     echo "<script>location.href='../user/index.php'</script>";
 }
 ?>
@@ -34,7 +34,7 @@ if ($idrole == 1) {
     <title>LaporPak - Staff Dashboard</title>
 
     <!-- Custom fonts for this template-->
-    <link href="../Boostrap/vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">
+    <link href="../Boostrap/boostrap/vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">
     <link href="https://fonts.googleapis.com/css?family=Nunito:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i" rel="stylesheet">
 
 
@@ -43,10 +43,10 @@ if ($idrole == 1) {
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.7.0/font/bootstrap-icons.css">
 
     <!-- Custom styles for this template-->
-    <link href="../Boostrap/css/sb-admin-2.min.css" rel="stylesheet">
+    <link href="../Boostrap/boostrap/css/sb-admin-2.min.css" rel="stylesheet">
 
     <!-- Custom styles for this page -->
-    <link href="../Boostrap/vendor/datatables/dataTables.bootstrap4.min.css" rel="stylesheet">
+    <link href="../Boostrap/boostrap/vendor/datatables/dataTables.bootstrap4.min.css" rel="stylesheet">
 
 </head>
 
@@ -330,8 +330,8 @@ if ($idrole == 1) {
                         <!-- Nav Item - User Information -->
                         <li class="nav-item dropdown no-arrow">
                             <a class="nav-link dropdown-toggle" href="#" id="userDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                            <span class="mr-2 d-none d-lg-inline text-gray-600 small"><?=$email?></span>
-                                <img class="img-profile rounded-circle" src="../assets/img/foto/<?=$foto?>">
+                                <span class="mr-2 d-none d-lg-inline text-gray-600 small"><?= $email ?></span>
+                                <img class="img-profile rounded-circle" src="../assets/img/foto/<?= $foto ?>">
                             </a>
                             <!-- Dropdown - User Information -->
                             <div class="dropdown-menu dropdown-menu-right shadow animated--grow-in" aria-labelledby="userDropdown">
