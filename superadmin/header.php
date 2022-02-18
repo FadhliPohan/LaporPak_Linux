@@ -126,7 +126,9 @@ if ($idrole == 4) {
                                     echo "active";
                                 } elseif ($page == "status") {
                                     echo "active";
-                                } else {
+                                } elseif ($page == "tindakan") {
+                                    echo "active";
+                                }else {
                                     echo "";
                                 } ?>">
                 <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="true" aria-controls="collapseTwo">
@@ -138,6 +140,7 @@ if ($idrole == 4) {
                         <h6 class="collapse-header">Data Master:</h6>
                         <a class="collapse-item <?php if ($page == "klasifikasi") echo "active"; ?>" href="tbl_klasifikasi.php">Klasifikasi</a>
                         <a class="collapse-item <?php if ($page == "status") echo "active"; ?>" href="tbl_status.php">Status</a>
+                        <a class="collapse-item <?php if ($page == "tindakan") echo "active"; ?>" href="tbl_tindakan.php">Tindakan</a>
                     </div>
                 </div>
             </li>

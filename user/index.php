@@ -24,7 +24,7 @@ include 'header.php';
                                 Semua Laporan</div>
                             <?php
                             //codingan Join Memangil detail Laporan
-                            $data_semua = mysqli_query($konek, "SELECT d.*, u.* FROM detail_laporan d JOIN user u WHERE d.id_user = u.id_user group by d.id_detail_laporan DESC");
+                            $data_semua = mysqli_query($konek, "SELECT d.*, u.*,s.*, l.* FROM detail_laporan d JOIN user u JOIN status s JOIN laporan l WHERE d.id_user = u.id_user and d.no_tiket = l.no_tiket and l.id_status= s.id_status and u.email = '$email' group by d.id_detail_laporan DESC");
                             $semua = mysqli_num_rows($data_semua);
                             ?>
                             <div class="row no-gutters align-items-center">

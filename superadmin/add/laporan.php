@@ -31,11 +31,14 @@ $sql            = "insert into detail_laporan SET no_tiket= '$no_tiket',id_klasi
 
 // $sql = "INSERT into detail_laporan SET email='$email', password='$pass',id_role='$idrole',slug='$slug'";
 
-$sql1            = "insert into laporan SET no_tiket='$no_tiket',id_status= '$id_status',id_tindakan= '$id_tindakan',id_pengerjaan= '$id_pengerjaan'";
+$sql1            = "insert into laporan SET no_tiket='$no_tiket',id_status= '$id_status',id_tindakan= '$id_tindakan'";
+$sql2            = "insert into penyidikan SET no_tiket='$no_tiket', id_pengerjaan = '1'";
 
 // perintah untuk mengeksekusi query di atas
 $insert         = mysqli_query($konek, $sql);
 $insert1        = mysqli_query($konek, $sql1);
+$insert2        = mysqli_query($konek, $sql2);
+
 /*
 if($insert){
     echo "insert data berhasil";

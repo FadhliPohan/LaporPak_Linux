@@ -58,7 +58,7 @@ include 'header.php';
                             <div class="text-xs font-weight-bold text-success text-uppercase mb-1">
                                 Laporan Diterima</div>
                             <?php
-                            $data_diterima = mysqli_query($konek, "SELECT d.*, u.* FROM detail_laporan d JOIN user u WHERE d.id_user = u.id_user group by d.id_detail_laporan DESC");
+                            $data_diterima = mysqli_query($konek, "SELECT d.*, u.*,s.*, l.*, p.*, pe.* FROM detail_laporan d JOIN user u JOIN status s JOIN laporan l JOIN penyidikan p JOIN pengerjaan pe WHERE d.id_user = u.id_user and d.no_tiket = l.no_tiket and l.id_status= s.id_status and p.id_pengerjaan = p.id_pengerjaan and p.id_pengerjaan = '5' group by d.id_detail_laporan DESC");
                             $diterima = mysqli_num_rows($data_diterima);
                             ?>
                             <div class="row no-gutters align-items-center">
@@ -91,7 +91,7 @@ include 'header.php';
                             <div class="text-xs font-weight-bold text-info text-uppercase mb-1">Laporan Selesai
                             </div>
                             <?php
-                            $data_selesai = mysqli_query($konek, "SELECT d.*, u.* FROM detail_laporan d JOIN user u WHERE d.id_user = u.id_user group by d.id_detail_laporan DESC");
+                            $data_selesai = mysqli_query($konek, "SELECT d.*, u.*,s.*, l.*, p.*, pe.* FROM detail_laporan d JOIN user u JOIN status s JOIN laporan l JOIN penyidikan p JOIN pengerjaan pe WHERE d.id_user = u.id_user and d.no_tiket = l.no_tiket and l.id_status= s.id_status and p.id_pengerjaan = p.id_pengerjaan and p.id_pengerjaan = '7' group by d.id_detail_laporan DESC");
                             $selesai = mysqli_num_rows($data_selesai);
                             ?>
                             <div class="row no-gutters align-items-center">
@@ -124,7 +124,7 @@ include 'header.php';
                             <div class="text-xs font-weight-bold text-warning text-uppercase mb-1">
                                 Laporan Ditolak</div>
                             <?php
-                            $data_tolak = mysqli_query($konek, "SELECT d.*, u.* FROM detail_laporan d JOIN user u WHERE d.id_user = u.id_user group by d.id_detail_laporan DESC");
+                            $data_tolak = mysqli_query($konek, "SELECT d.*, u.*,s.*, l.*, p.*, pe.* FROM detail_laporan d JOIN user u JOIN status s JOIN laporan l JOIN penyidikan p JOIN pengerjaan pe WHERE d.id_user = u.id_user and d.no_tiket = l.no_tiket and l.id_status= s.id_status and p.id_pengerjaan = p.id_pengerjaan and p.id_pengerjaan = '4' group by d.id_detail_laporan DESC");
                             $tolak = mysqli_num_rows($data_tolak);
                             ?>
                             <div class="h5 mb-0 font-weight-bold text-gray-800"><?php echo $tolak ?></div>

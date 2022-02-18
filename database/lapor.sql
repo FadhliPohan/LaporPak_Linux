@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: localhost
--- Generation Time: Feb 03, 2022 at 02:45 AM
+-- Generation Time: Feb 18, 2022 at 06:46 PM
 -- Server version: 10.4.22-MariaDB
 -- PHP Version: 8.0.13
 
@@ -64,16 +64,16 @@ INSERT INTO `admin` (`id_admin`, `email`, `password`, `id_role`, `slug`) VALUES
 
 CREATE TABLE `detail_laporan` (
   `id_detail_laporan` int(11) NOT NULL,
-  `id_klasifikasi` int(11) NOT NULL,
-  `no_tiket` varchar(300) NOT NULL,
-  `judul_laporan` text NOT NULL,
-  `isi_laporan` text NOT NULL,
-  `id_user` int(11) NOT NULL,
-  `tanggal_kejadian` date NOT NULL,
-  `lokasi_kejadian` text NOT NULL,
-  `tanggal` date NOT NULL,
-  `saksi` varchar(100) NOT NULL,
-  `lampiran_bukti` text NOT NULL
+  `id_klasifikasi` int(11) DEFAULT NULL,
+  `no_tiket` varchar(300) DEFAULT NULL,
+  `judul_laporan` text DEFAULT NULL,
+  `isi_laporan` text DEFAULT NULL,
+  `id_user` int(11) DEFAULT NULL,
+  `tanggal_kejadian` date DEFAULT NULL,
+  `lokasi_kejadian` text DEFAULT NULL,
+  `tanggal` datetime DEFAULT current_timestamp(),
+  `saksi` varchar(100) DEFAULT NULL,
+  `lampiran_bukti` text DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
@@ -81,13 +81,7 @@ CREATE TABLE `detail_laporan` (
 --
 
 INSERT INTO `detail_laporan` (`id_detail_laporan`, `id_klasifikasi`, `no_tiket`, `judul_laporan`, `isi_laporan`, `id_user`, `tanggal_kejadian`, `lokasi_kejadian`, `tanggal`, `saksi`, `lampiran_bukti`) VALUES
-(2, 2, '342fd', 'tawuran sma', 'sering terjadinya tawuran didepan rumah saya', 2, '2021-11-11', 'Simpang Limun', '2021-11-12', 'AGUS', 'goto.jpg'),
-(3, 1, 'e3242', 'perampasan sepeda motor', 'sering terjadinya peampokan didepan pasar', 2, '2021-11-25', 'jln. Merak', '2021-11-12', 'RAKA', 'jpg.jpg'),
-(4, 2, '342fdf', 'tawuran sma', 'sering terjadinya tawuran didepan rumah saya', 2, '2021-11-11', 'KM. 8 jln. merdeka', '2021-11-12', 'WIWIK', 'goto.jpg'),
-(5, 1, 'e3242sdf', 'perampasan sepeda motor', 'sering terjadinya peampokan didepan pasar', 2, '2021-11-25', 'Gang Alam baik', '2021-11-12', 'NINA', 'jpg.jpg'),
-(6, 2, '342fdsa', 'tawuran sma', 'sering terjadinya tawuran didepan rumah saya', 2, '2021-11-11', 'Jln. sukarno', '2021-11-12', 'SUGI', 'goto.jpg'),
-(7, 1, 'e324dafd', 'perampasan sepeda motor', 'sering terjadinya peampokan didepan pasar', 2, '2021-11-25', 'Jln. Raya', '2021-11-23', 'LILI', 'jpg.jpg'),
-(8, 2, '342fdsdfws', 'tawuran sma', 'sering terjadinya tawuran didepan rumah saya', 2, '2021-11-11', 'Simpang 4, palembang', '2021-11-12', 'ATTA', 'goto.jpg');
+(39, 1, '5KPYR6YHWS', 'Pemukulan warga', 'Baiklah', 1, '2022-02-10', 'Jakarta', '2022-02-15 22:18:49', 'Rinaldi', '489-contoh.jpg');
 
 -- --------------------------------------------------------
 
@@ -107,7 +101,11 @@ CREATE TABLE `klasifikasi` (
 
 INSERT INTO `klasifikasi` (`id_klasifikasi`, `nama_masalah`, `deskripsi`) VALUES
 (1, 'Perampokan', 'Kejahatan menggambil atau merampas hak orang lain dalam bentuk materi'),
-(2, 'Tawuran', 'tindak kejahatan yang membuat kedua belah pihak melakukan tindakan kekerasan');
+(2, 'Tawuran', 'tindak kejahatan yang membuat kedua belah pihak melakukan tindakan kekerasan'),
+(3, 'Pemerkosaan', 'Tindakan asusila yang dilakukan oleh sekelompok, perorangan terhadap lawan jenisnya'),
+(4, 'Penyesatan', '   melakukan pengelabuhan terhadap kelompok atau perorangan baik itu terhadap agama, ras, bangsa'),
+(7, 'Penipuan', 'Tindak kejahatan Yang mengatas namakan diri orang lain untuk mengambil keuntungan'),
+(8, 'penyalahgunaan Obat', 'Menggunakan Obat atau zat berbahaya yang dapat merusak tubuh seperti narkoba, sabu, dll.');
 
 -- --------------------------------------------------------
 
@@ -117,21 +115,20 @@ INSERT INTO `klasifikasi` (`id_klasifikasi`, `nama_masalah`, `deskripsi`) VALUES
 
 CREATE TABLE `laporan` (
   `id_lapor` int(11) NOT NULL,
-  `no_tiket` varchar(300) NOT NULL,
-  `id_tindakan` int(11) NOT NULL,
-  `id_status` int(11) NOT NULL,
-  `tanggal_selesai` date DEFAULT NULL,
-  `id_staff` int(11) NOT NULL,
-  `id_kepala` int(11) NOT NULL,
-  `id_pengerjaan` int(11) NOT NULL
+  `no_tiket` varchar(300) DEFAULT NULL,
+  `id_tindakan` int(11) DEFAULT NULL,
+  `id_status` int(11) DEFAULT NULL,
+  `tanggal_periksa` date DEFAULT NULL,
+  `id_staff` int(11) DEFAULT NULL,
+  `id_kepala` int(11) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
 -- Dumping data for table `laporan`
 --
 
-INSERT INTO `laporan` (`id_lapor`, `no_tiket`, `id_tindakan`, `id_status`, `tanggal_selesai`, `id_staff`, `id_kepala`, `id_pengerjaan`) VALUES
-(1, '1', 1, 3, '2021-11-11', 3, 4, 0);
+INSERT INTO `laporan` (`id_lapor`, `no_tiket`, `id_tindakan`, `id_status`, `tanggal_periksa`, `id_staff`, `id_kepala`) VALUES
+(11, '5KPYR6YHWS', 1, 1, NULL, NULL, NULL);
 
 -- --------------------------------------------------------
 
@@ -144,6 +141,41 @@ CREATE TABLE `pengerjaan` (
   `status_pengerjaan` varchar(100) NOT NULL,
   `deskripsi` text NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Dumping data for table `pengerjaan`
+--
+
+INSERT INTO `pengerjaan` (`id_pengerjaan`, `status_pengerjaan`, `deskripsi`) VALUES
+(1, 'Sedang Diverifikasi', 'Aduan Yang selah dibuat sedang dilakukan verifikasi data oleh para staff'),
+(2, 'Terverifikasi', 'Aduan yang anda buat memenuhi syarat, selanjutnya akan dilakukan penyidikan'),
+(4, 'Ditolak', 'Aduan ditolak Karena tidak memenuhi data yang dibutuhkan atau data yang diisikan salah'),
+(5, 'Diterima', 'Aduan yang diberikan telah memenuhi syarat, akan dilakukan pengerjaan oleh staff kepolisian'),
+(6, 'Menunggu', 'Aduan yang diberikan sedang dalam penyidikan oleh staff'),
+(7, 'Selesai', 'Aduan yang diterima telah dikerjakan dan diselesaikan');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `penyidikan`
+--
+
+CREATE TABLE `penyidikan` (
+  `id_penyidikan` int(11) NOT NULL,
+  `no_tiket` varchar(100) NOT NULL,
+  `tgl_mulai` date DEFAULT NULL,
+  `tgl_selesai` date DEFAULT NULL,
+  `id_pengerjaan` int(11) DEFAULT NULL,
+  `hasil_penyidikan` varchar(300) DEFAULT NULL,
+  `keterangan_penyidikan` text DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Dumping data for table `penyidikan`
+--
+
+INSERT INTO `penyidikan` (`id_penyidikan`, `no_tiket`, `tgl_mulai`, `tgl_selesai`, `id_pengerjaan`, `hasil_penyidikan`, `keterangan_penyidikan`) VALUES
+(7, '5KPYR6YHWS', NULL, NULL, 1, NULL, NULL);
 
 -- --------------------------------------------------------
 
@@ -195,6 +227,7 @@ INSERT INTO `role` (`id_role`, `status`) VALUES
 CREATE TABLE `status` (
   `id_status` int(11) NOT NULL,
   `nama_status` varchar(100) NOT NULL,
+  `colour` varchar(100) NOT NULL,
   `deskripsi_status` text NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
@@ -202,10 +235,11 @@ CREATE TABLE `status` (
 -- Dumping data for table `status`
 --
 
-INSERT INTO `status` (`id_status`, `nama_status`, `deskripsi_status`) VALUES
-(1, 'menunggu', 'Staff kepolisian sedang memeriksa data anda'),
-(2, 'selesai', 'telah dilakukan penyesesaian, oleh staff'),
-(3, 'Read', 'Staff sedang memeriksa  kelengkapan data');
+INSERT INTO `status` (`id_status`, `nama_status`, `colour`, `deskripsi_status`) VALUES
+(1, 'menunggu', 'warning', 'Staff kepolisian sedang memeriksa data anda'),
+(2, 'selesai', 'success', 'telah dilakukan penyesesaian, oleh staff'),
+(3, 'Read', 'primary', 'Staff sedang memeriksa  kelengkapan data'),
+(4, 'Pending', 'danger', 'Sedang dilakukan pemeriksaan lebih lanjut oleh para staff');
 
 -- --------------------------------------------------------
 
@@ -239,7 +273,11 @@ CREATE TABLE `tindakan` (
 --
 
 INSERT INTO `tindakan` (`id_tindakan`, `nama_tindakan`, `deskripsi_tindakan`) VALUES
-(1, 'proses pengkajian', 'proses melakukan pengambilan data');
+(1, 'proses pengkajian', 'proses melakukan pengambilan data'),
+(2, 'Perbaikan Data', 'Staff kelpolisian melakukan Perbaikan Data'),
+(3, 'Cek Lokasi', 'Melakukan Cek ke lokasi Kejadian'),
+(4, 'Laporan Penyelasian', 'Pihak staff kepolisian membuat laporan terkait aduan'),
+(5, 'Aduan Ditutup', 'Aduan ditutup Oleh Pihak Kepolisian');
 
 -- --------------------------------------------------------
 
@@ -321,6 +359,12 @@ ALTER TABLE `pengerjaan`
   ADD PRIMARY KEY (`id_pengerjaan`);
 
 --
+-- Indexes for table `penyidikan`
+--
+ALTER TABLE `penyidikan`
+  ADD PRIMARY KEY (`id_penyidikan`);
+
+--
 -- Indexes for table `polisi`
 --
 ALTER TABLE `polisi`
@@ -372,25 +416,31 @@ ALTER TABLE `admin`
 -- AUTO_INCREMENT for table `detail_laporan`
 --
 ALTER TABLE `detail_laporan`
-  MODIFY `id_detail_laporan` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=10;
+  MODIFY `id_detail_laporan` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=40;
 
 --
 -- AUTO_INCREMENT for table `klasifikasi`
 --
 ALTER TABLE `klasifikasi`
-  MODIFY `id_klasifikasi` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+  MODIFY `id_klasifikasi` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=9;
 
 --
 -- AUTO_INCREMENT for table `laporan`
 --
 ALTER TABLE `laporan`
-  MODIFY `id_lapor` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+  MODIFY `id_lapor` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=12;
 
 --
 -- AUTO_INCREMENT for table `pengerjaan`
 --
 ALTER TABLE `pengerjaan`
-  MODIFY `id_pengerjaan` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `id_pengerjaan` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
+
+--
+-- AUTO_INCREMENT for table `penyidikan`
+--
+ALTER TABLE `penyidikan`
+  MODIFY `id_penyidikan` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
 
 --
 -- AUTO_INCREMENT for table `polisi`
@@ -408,7 +458,7 @@ ALTER TABLE `role`
 -- AUTO_INCREMENT for table `status`
 --
 ALTER TABLE `status`
-  MODIFY `id_status` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
+  MODIFY `id_status` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
 
 --
 -- AUTO_INCREMENT for table `surat_tugas`
@@ -420,7 +470,7 @@ ALTER TABLE `surat_tugas`
 -- AUTO_INCREMENT for table `tindakan`
 --
 ALTER TABLE `tindakan`
-  MODIFY `id_tindakan` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+  MODIFY `id_tindakan` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
 
 --
 -- AUTO_INCREMENT for table `user`
@@ -436,7 +486,6 @@ ALTER TABLE `user`
 -- Constraints for table `detail_laporan`
 --
 ALTER TABLE `detail_laporan`
-  ADD CONSTRAINT `detail_laporan_ibfk_1` FOREIGN KEY (`id_user`) REFERENCES `admin` (`id_admin`),
   ADD CONSTRAINT `detail_laporan_ibfk_2` FOREIGN KEY (`id_klasifikasi`) REFERENCES `klasifikasi` (`id_klasifikasi`);
 
 --
