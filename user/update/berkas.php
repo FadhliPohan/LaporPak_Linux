@@ -22,17 +22,25 @@ move_uploaded_file($file_tmp_kk, "../../assets/img/laporan/" . $kk_baru);
 move_uploaded_file($file_tmp_berkas, "../../assets/img/laporan/" . $berkas_baru);
 
 // sintaks sql untuk insert data
+if ($ktp != "") {
+    $sql            = "UPDATE detail_berkas SET ktp='$ktp_baru' where no_tiket='$no_tiket'";
+
+    // perintah untuk mengeksekusi query di atas
+    $insert         = mysqli_query($konek, $sql);
+}
+if ($kk != "") {
+    $sql            = "UPDATE detail_berkas SET kk='$kk_baru' where no_tiket='$no_tiket'";
+
+    // perintah untuk mengeksekusi query di atas
+    $insert         = mysqli_query($konek, $sql);
+}
 if ($berkas != "") {
-    $sql            = "INSERT INTO detail_berkas (no_tiket,ktp, kk, berkas) VALUES ('$no_tiket','$ktp_baru', '$kk_baru', '$berkas_baru')";
-} else {
-    $sql            = "INSERT INTO detail_berkas (no_tiket,ktp, kk, berkas) VALUES ('$no_tiket','$ktp_baru', '$kk_baru', NULL)";
+    $sql            = "UPDATE detail_berkas SET berkas='$berkas_baru' where no_tiket='$no_tiket'";
+
+    // perintah untuk mengeksekusi query di atas
+    $insert         = mysqli_query($konek, $sql);
 }
 
-
-
-
-// perintah untuk mengeksekusi query di atas
-$insert         = mysqli_query($konek, $sql);
 
 
 

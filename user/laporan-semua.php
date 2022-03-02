@@ -111,7 +111,7 @@ include 'header.php';
                             <td><a class='btn btn-<?= $data['colour'] ?> '> <?= $data['nama_status'] ?></a> </td>
                             <td align="center"><a href='form-update-laporan.php?no_tiket=<?php echo $data['no_tiket']; ?>' class='btn btn-primary '><i class="fas fa-eye"></i></a>
                             </td>
-                            <td align="center"> <a href='form-add-berkas.php?no_tiket=<?php echo $data['no_tiket']; ?>' class='btn btn-primary '><i class="fas fa-eye"></i></a>
+                            <td align="center"> <a href='form-update-berkas.php?no_tiket=<?php echo $data['no_tiket']; ?>' class='btn btn-primary '><i class="fas fa-eye"></i></a>
                             </td>
                         </tr>
 
