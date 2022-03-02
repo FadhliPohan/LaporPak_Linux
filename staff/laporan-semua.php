@@ -62,7 +62,9 @@ include 'header.php';
                         <th>Tanggal Kejadian</th>
                         <th>Tanggal laporan</th>
                         <th>Bukti</th>
-                        <th>Lihat</th>
+                        <th>Cek ID</th>
+                        <th>Cek Berkas</th>
+                        <th>Cek Laporan</th>
 
                     </tr>
                 <tfoot>
@@ -74,7 +76,9 @@ include 'header.php';
                         <th>Jenis Kelamin</th>
                         <th>Pekerjaan</th>
                         <th>Alamat</th>
-                        <th>Lihat</th>
+                        <th>Cek ID</th>
+                        <th>Cek Berkas</th>
+                        <th>Cek Laporan</th>
 
                     </tr>
                 </tfoot>
@@ -109,6 +113,10 @@ include 'header.php';
                             <td><?= $data['tanggal_kejadian'] ?></td>
                             <td><?= $data['tanggal'] ?></td>
                             <td><?= $data['lampiran_bukti'] ?></td>
+                            <td><a href='cekid.php?no_tiket=<?php echo $data['no_tiket']; ?>' class='btn btn-warning '><i class="fas fa-eye"></i></a>
+                            </td>
+                            <td><a href='cekberkas.php?no_tiket=<?php echo $data['no_tiket']; ?>' class='btn btn-warning '><i class="fas fa-eye"></i></a>
+                            </td>
                             <td><a href='cekdata.php?no_tiket=<?php echo $data['no_tiket']; ?>' class='btn btn-warning '><i class="fas fa-eye"></i></a>
                             </td>
 

@@ -12,7 +12,7 @@ $tanggal_kejadian = $_POST['tanggal_kejadian'];
 $lokasi_kejadian  = $_POST['lokasi_kejadian'];
 $saksi            = $_POST['saksi'];
 $id_status        = '1';
-$id_penyidikan    = '1';
+$id_pengerjaan    = '1';
 $id_tindakan      = '1';
 
 
@@ -31,14 +31,14 @@ $sql            = "insert into detail_laporan SET no_tiket= '$no_tiket',id_klasi
 
 // $sql = "INSERT into detail_laporan SET email='$email', password='$pass',id_role='$idrole',slug='$slug'";
 
-$sql1            = "insert into laporan SET no_tiket='$no_tiket',id_status= '$id_status',id_tindakan= '$id_tindakan',id_penyidikan= '$id_penyidikan'";
-
-$sql2            = "insert into penyidikan SET no_tiket='$no_tiket'";
+$sql1            = "insert into laporan SET no_tiket='$no_tiket',id_status= '$id_status',id_tindakan= '$id_tindakan'";
+$sql2            = "insert into penyidikan SET no_tiket='$no_tiket', id_pengerjaan = '1'";
 
 // perintah untuk mengeksekusi query di atas
 $insert         = mysqli_query($konek, $sql);
 $insert1        = mysqli_query($konek, $sql1);
 $insert2        = mysqli_query($konek, $sql2);
+
 /*
 if($insert){
     echo "insert data berhasil";
@@ -46,4 +46,4 @@ if($insert){
     echo "insert data gagal";
 }
 */
-header("location:../laporan-semua.php");
+header("location:../form-add-berkas.php?no_tiket=<?php echo $no_tiket; ?>");

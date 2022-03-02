@@ -62,7 +62,8 @@ include 'header.php';
                         <th>Tanggal laporan</th>
                         <th>Bukti</th>
                         <th>Status</th>
-                        <th>Lihat</th>
+                        <th>Lihat Laporan</th>
+                        <th>Lihat Berkas</th>
                     </tr>
                 <tfoot>
                     <tr>
@@ -73,7 +74,8 @@ include 'header.php';
                         <th>Pekerjaan</th>
                         <th>Alamat</th>
                         <th>status</th>
-                        <th>Lihat</th>
+                        <th>Lihat Laporan</th>
+                        <th>Lihat Berkas</th>
                     </tr>
                 </tfoot>
                 <tbody>
@@ -107,7 +109,9 @@ include 'header.php';
                             <td><?= $data['tanggal'] ?></td>
                             <td><?= $data['lampiran_bukti'] ?></td>
                             <td><a class='btn btn-<?= $data['colour'] ?> '> <?= $data['nama_status'] ?></a> </td>
-                            <td><a href='form-update-laporan.php?no_tiket=<?php echo $data['no_tiket']; ?>' class='btn btn-primary '><i class="fas fa-eye"></i></a>
+                            <td align="center"><a href='form-update-laporan.php?no_tiket=<?php echo $data['no_tiket']; ?>' class='btn btn-primary '><i class="fas fa-eye"></i></a>
+                            </td>
+                            <td align="center"> <a href='form-add-berkas.php?no_tiket=<?php echo $data['no_tiket']; ?>' class='btn btn-primary '><i class="fas fa-eye"></i></a>
                             </td>
                         </tr>
 
