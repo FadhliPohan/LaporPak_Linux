@@ -1,8 +1,8 @@
 <?php
 $page = "user";
 include 'header.php';
-$id_mail = $_GET['emailku'];
-$mailku = mysqli_query($konek, "SELECT a.*, r.*, u.* FROM admin a JOIN role r JOIN user u WHERE a.email = '$id_mail' AND a.id_role = r.id_role AND a.email = u.email;");
+$tiket = $_GET['no_tiket'];
+$mailku = mysqli_query($konek, "SELECT a.*,dl.*, u.* FROM admin a JOIN detail_laporan dl JOIN role r JOIN user u WHERE dl.no_tiket = '$tiket' AND a.id_role = r.id_role AND a.id_admin = dl.id_user and a.id_admin =u.id_user;");
 $row = mysqli_fetch_array($mailku);
 
 ?>
@@ -20,7 +20,7 @@ $row = mysqli_fetch_array($mailku);
         </div>
         <div class="card-body">
 
-            <form action="add/user.php" method="POST" enctype="multipart/form-data">
+            <form action="" method="POST" enctype="multipart/form-data">
                 <div class="form-group row">
                     <label for="NID" class="col-sm-2 col-form-label">NIK</label>
                     <div class="col-sm-3">
@@ -46,7 +46,7 @@ $row = mysqli_fetch_array($mailku);
                     </div>
                     <div class="form-group col-sm-6">
                         <label for="password">Password</label>
-                        <input type="Password" name="password" id="password" class="form-control" placeholder="Password Email" maxlength="13" value="" required>
+                        <input type="Password" name="password" id="password" class="form-control" placeholder="Password Email" maxlength="13" value="">
 
                     </div>
 
@@ -126,14 +126,15 @@ $row = mysqli_fetch_array($mailku);
                 <div class="form-group row">
                     <label for="foto" class="col-sm-2 col-form-label">Foto Profil</label>
                     <div class="col-sm-10">
-                        <input type="file" name="foto" class="form-control" id="foto" placeholder="Foto anda" value="" required>
+                        <input type="file" name="foto" class="form-control" id="foto" placeholder="Foto anda" value="">
 
                     </div>
                 </div>
                 <div class="form-actions">
-                    <a href="tbl_user.php" class="btn btn-info mt-2"><i class="fas fa-fw fa-arrow-left"></i> Kembali</a>
-                    <button type="submit" class="btn btn-success mt-2"> <i class="fa fa-check"></i> Simpan</button>
-                    <button type="reset" class="btn btn-danger mt-2"><i class="fa fa-times"></i> Hapus</button>
+                    <a href="laporan-semua.php" class="btn btn-info mt-2"><i class="fas fa-fw fa-arrow-left"></i> Kembali</a>
+                    <a href="cek/id.php?no_tiket=<?php echo $tiket; ?>" class="btn btn-success mt-2"><i class="fa fa-check"></i> Diterima</a>
+                    <a href="cek/tolakid.php?no_tiket=<?php echo $tiket; ?>" class="btn btn-danger mt-2"><i class="fa fa-times"></i> Ditolak</a>
+
                 </div>
             </form>
         </div>

@@ -32,7 +32,7 @@ $row = mysqli_fetch_array($tiketku);
                         <div class="input-group">
                             <input type="file" name="ktp" class="form-control" id="ktp" placeholder="Upload Kartu Tanda Penduduk" value="">
                             <div class="input-group-append">
-                                <a href="../assets/img/laporan/<?php echo $row['ktp'] ?>" class="btn btn-success m-1">Lihat disini</a>
+                                <a target="_blank" href="../assets/img/laporan/<?php echo $row['ktp'] ?>" class="btn btn-success m-1">Lihat disini</a>
                             </div>
                         </div>
 
@@ -50,7 +50,7 @@ $row = mysqli_fetch_array($tiketku);
                         <div class="input-group">
                             <input type="file" name="kk" class="form-control" id="kk" placeholder="Upload Kartu Keluarga" value="">
                             <div class="input-group-append">
-                                <a href="../assets/img/laporan/<?php echo $row['kk'] ?>" class="btn btn-success m-1">Lihat disini</a>
+                                <a target="_blank" href="../assets/img/laporan/<?php echo $row['kk'] ?>" class="btn btn-success m-1">Lihat disini</a>
                             </div>
                         </div>
                         <h6 class="m-1 font-weight">*note : Tidak perlu diisi bila tidak ingin diubah</h6>
@@ -64,7 +64,7 @@ $row = mysqli_fetch_array($tiketku);
                         <div class="input-group">
                             <input type="file" name="berkas" class="form-control" id="berkas" placeholder="Upload Berkas" value="">
                             <div class="input-group-append">
-                                <a href="../assets/img/laporan/<?php echo $row['berkas'] ?>" class="btn btn-success m-1">Lihat disini</a>
+                                <a target="_blank" href="../assets/img/laporan/<?php echo $row['berkas'] ?>" class="btn btn-success m-1">Lihat disini</a>
                             </div>
                         </div>
                         <h6 class="m-1 font-weight">*note : Tidak perlu diisi bila tidak ingin diubah</h6>

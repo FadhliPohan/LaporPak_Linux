@@ -1,3 +1,5 @@
+<!-- surat tugas dari notiket ke staff -->
+
 <?php
 $page = "semua";
 include 'header.php';
@@ -6,7 +8,7 @@ include 'header.php';
 <div class="container-fluid">
 
     <!-- Page Heading -->
-    <h1 class="h3 mb-2 text-gray-800">Tabel Semua Laporan</h1>
+    <h1 class="h3 mb-2 text-gray-800">Tabel Semua Tugas</h1>
     <p class="mb-4">Data dibawah ini merupakan data yang didapatkan dari seluruh aduan laporan yang dilaporkkan oleh pelapor.</p>
 
     <!-- DataTales Example -->
@@ -20,15 +22,7 @@ include 'header.php';
         </div>
         <div class="card-body">
             <div class="table-responsive table-striped">
-                <div class="d-flex justify-content-between">
-                    <a class="btn btn-success w-15 " href="form-add-laporan.php">Tambah User <i class="fas fa-fw fa-plus-circle"></i>
-                        <!-- <span class="spinner-border spinner-border-sm"></span> -->
-                    </a>
-                    <a class="btn btn-danger w-15 " href="">Export To PDF <i class="fas fa-fw fa-file-pdf"></i>
-                        <!-- <span class="spinner-border spinner-border-sm"></span> -->
-                    </a>
-                </div>
-                <br>
+
                 <form action="laporan-semua.php" method="get">
                     <div class="form-row">
                         <div class="form-group col-sm-4">
@@ -53,27 +47,27 @@ include 'header.php';
 
             </div>
             <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
-                <thead class="thead-dark">
+                <thead style="background-color: #3f65d4; color: #FFFFFF;">
                     <tr>
                         <th>No</th>
-                        <th>No.Tiket</th>
                         <th>Nama</th>
+                        <th>No.Tiket</th>
                         <th>Judul</th>
                         <th>Tanggal Kejadian</th>
                         <th>Tanggal laporan</th>
                         <th>Bukti</th>
-                        <th>Aksi</th>
+                        <th>Tambah Surat Tugas</th>
                     </tr>
                 <tfoot>
                     <tr>
                         <th>No</th>
                         <th>No.Tiket</th>
                         <th>Nama</th>
-                        <th>Judul</th>
-                        <th>Tanggal Kejadian</th>
-                        <th>Tanggal laporan</th>
-                        <th>Bukti</th>
-                        <th>Aksi</th>
+                        <th>NIK</th>
+                        <th>Jenis Kelamin</th>
+                        <th>Pekerjaan</th>
+                        <th>Alamat</th>
+                        <th>Tambah Surat Tugas</th>
                     </tr>
                 </tfoot>
                 <tbody>
@@ -86,6 +80,7 @@ include 'header.php';
                     } else {
 
                         $sql = "SELECT d.*, u.* FROM detail_laporan d JOIN user u WHERE d.id_user = u.id_user group by d.id_detail_laporan DESC";
+                        // $sql = "SELECT d.* , u.* from detail d join user u join user where d.id = u.id and d.id =u.lokasi on ";
                         // $sql = "SELECT * FROM detail_laporan group by id_detail_laporan DESC";
                         $query = mysqli_query($konek, $sql) or die("SQL Anda Salah");
                     }
@@ -100,15 +95,15 @@ include 'header.php';
                     ?>
                         <tr>
                             <td><?= $nomor ?></td>
-                            <td><?= $data['no_tiket'] ?></td>
                             <td><?= $data['nama'] ?></td>
+                            <td><?= $data['no_tiket'] ?></td>
                             <td><?= $data['judul_laporan'] ?></td>
                             <td><?= $data['tanggal_kejadian'] ?></td>
                             <td><?= $data['tanggal'] ?></td>
                             <td><?= $data['lampiran_bukti'] ?></td>
-                            <td><a href='edit/laporan.php?no_tiket=<?php echo $data['no_tiket']; ?>' class='btn btn-info btn-circle'><i class="fas fa-info-circle"></i></a>
-                                <a href='delete/laporan.php?no_tiket=<?php echo $data['no_tiket']; ?>' class='btn btn-danger btn-circle'><i class="fas fa-trash"></i></a>
+                            <td align="center"><a href='form-add-surat.php?no_tiket=<?php echo $data['no_tiket']; ?>' class='btn btn-primary '><i class="fas fa-plus"></i></a>
                             </td>
+
                         </tr>
 
                         <!--Tutup Perulangan data-->

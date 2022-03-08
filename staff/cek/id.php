@@ -1,28 +1,21 @@
 <?php
 include '../../koneksi.php';
 
-$id_klasifikasi     = $_POST['id_klasifikasi'];
+session_start();
+$id_user          = $_SESSION['id_user'];
+
+
 // menyimpan hasil inputan kedalam variabel
-$nama_masalah       = $_POST['nama_masalah'];
-$deskripsi          = $_POST['deskripsi'];
+$id_user          = $_SESSION['id_user'];
+$tiket = $_GET['no_tiket'];
+$sql = "UPDATE laporan SET id_tindakan=2,id_status=3,id_staff='$id_user' tanggal_pemeriksa NOW() WHERE no_tiket='$tiket'";
+
+$sql1 = "UPDATE cek_berkas SET cek_id=1, tgl_cek_id= NOW() WHERE no_tiket='$tiket'";
 
 
 
-$sql1 = "UPDATE klasifikasi SET  deskripsi='$deskripsi' ,nama_masalah='$nama_masalah' WHERE id_klasifikasi='$id_klasifikasi'";
-
-
-
-
-// perintah untuk mengeksekusi query di atas
+$insert     = mysqli_query($konek, $sql);
 $insert1     = mysqli_query($konek, $sql1);
 
 
-
-/*
-if($insert){
-    echo "insert data berhasil";
-}  else {
-    echo "insert data gagal";
-}
-*/
-header("location:../tbl_klasifikasi.php");
+header("location:../cekberkas.php?no_tiket=$tiket");

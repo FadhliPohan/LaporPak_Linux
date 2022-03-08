@@ -18,7 +18,7 @@ $row = mysqli_fetch_array($tiketku);
         </div>
         <div class="card-body">
 
-            <form action="update/berkas.php" method="POST" enctype="multipart/form-data">
+            <form action="" method="POST" enctype="multipart/form-data">
                 <div class="form-group row">
                     <label for="NOTIKET" class="col-sm-2 col-form-label">No.Tiket</label>
                     <div class="col-sm-3">
@@ -32,7 +32,7 @@ $row = mysqli_fetch_array($tiketku);
                         <div class="input-group">
                             <input type="file" name="ktp" class="form-control" id="ktp" placeholder="Upload Kartu Tanda Penduduk" value="">
                             <div class="input-group-append">
-                                <a href="../assets/img/laporan/<?php echo $row['ktp'] ?>" class="btn btn-success m-1">Lihat disini</a>
+                                <a target="_blank" href="../assets/img/laporan/<?php echo $row['ktp'] ?>" class="btn btn-success m-1">Lihat disini</a>
                             </div>
                         </div>
 
@@ -50,7 +50,7 @@ $row = mysqli_fetch_array($tiketku);
                         <div class="input-group">
                             <input type="file" name="kk" class="form-control" id="kk" placeholder="Upload Kartu Keluarga" value="">
                             <div class="input-group-append">
-                                <a href="../assets/img/laporan/<?php echo $row['kk'] ?>" class="btn btn-success m-1">Lihat disini</a>
+                                <a target="_blank" href="../assets/img/laporan/<?php echo $row['kk'] ?>" class="btn btn-success m-1">Lihat disini</a>
                             </div>
                         </div>
                         <h6 class="m-1 font-weight">*note : Tidak perlu diisi bila tidak ingin diubah</h6>
@@ -64,7 +64,7 @@ $row = mysqli_fetch_array($tiketku);
                         <div class="input-group">
                             <input type="file" name="berkas" class="form-control" id="berkas" placeholder="Upload Berkas" value="">
                             <div class="input-group-append">
-                                <a href="../assets/img/laporan/<?php echo $row['berkas'] ?>" class="btn btn-success m-1">Lihat disini</a>
+                                <a target="_blank" href="../assets/img/laporan/<?php echo $row['berkas'] ?>" class="btn btn-success m-1">Lihat disini</a>
                             </div>
                         </div>
                         <h6 class="m-1 font-weight">*note : Tidak perlu diisi bila tidak ingin diubah</h6>
@@ -76,9 +76,9 @@ $row = mysqli_fetch_array($tiketku);
 
 
                 <div class="form-actions">
-                    <button href="laporan-semua.php" class="btn btn-info mt-2"><i class="fas fa-fw fa-arrow-left"></i> Kembali</button>
-                    <button type="submit" class="btn btn-success mt-2"> <i class="fa fa-check"></i> Update</button>
-                    <button type="reset" class="btn btn-danger mt-2"><i class="fa fa-times"></i> Hapus</button>
+                    <a href="cekid.php" class="btn btn-info mt-2"><i class="fas fa-fw fa-arrow-left"></i> Kembali</a>
+                    <a href="cek/berkas.php?no_tiket=<?php echo $tiket; ?>" class="btn btn-success mt-2"><i class="fa fa-check"></i> Diterima</a>
+                    <a href="cek/tolakberkas.php?no_tiket=<?php echo $tiket; ?>" class="btn btn-danger mt-2"><i class="fa fa-times"></i> Ditolak</a>
                 </div>
             </form>
         </div>

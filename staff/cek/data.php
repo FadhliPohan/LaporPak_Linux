@@ -1,28 +1,10 @@
 <?php
 include '../../koneksi.php';
 
-$id_klasifikasi     = $_POST['id_klasifikasi'];
-// menyimpan hasil inputan kedalam variabel
-$nama_masalah       = $_POST['nama_masalah'];
-$deskripsi          = $_POST['deskripsi'];
+$tiket = $_GET['no_tiket'];
+$catatan = $_POST['keterangan_cek'];
+$sql1 = "UPDATE cek_berkas SET cek_laporan=1,keterangan_cek='$catatan', tgl_cek_laporan= NOW() WHERE no_tiket='$tiket'";
 
-
-
-$sql1 = "UPDATE klasifikasi SET  deskripsi='$deskripsi' ,nama_masalah='$nama_masalah' WHERE id_klasifikasi='$id_klasifikasi'";
-
-
-
-
-// perintah untuk mengeksekusi query di atas
 $insert1     = mysqli_query($konek, $sql1);
 
-
-
-/*
-if($insert){
-    echo "insert data berhasil";
-}  else {
-    echo "insert data gagal";
-}
-*/
-header("location:../tbl_klasifikasi.php");
+header("location:../laporan-semua.php");
