@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: localhost
--- Generation Time: Feb 18, 2022 at 06:46 PM
+-- Generation Time: Mar 15, 2022 at 03:25 PM
 -- Server version: 10.4.22-MariaDB
 -- PHP Version: 8.0.13
 
@@ -59,6 +59,56 @@ INSERT INTO `admin` (`id_admin`, `email`, `password`, `id_role`, `slug`) VALUES
 -- --------------------------------------------------------
 
 --
+-- Table structure for table `cek_berkas`
+--
+
+CREATE TABLE `cek_berkas` (
+  `id_cek` int(11) NOT NULL,
+  `no_tiket` varchar(100) DEFAULT NULL,
+  `cek_id` varchar(100) DEFAULT NULL,
+  `tgl_cek_id` date DEFAULT NULL,
+  `cek_berkas` varchar(100) DEFAULT NULL,
+  `tgl_cek_berkas` date DEFAULT NULL,
+  `cek_laporan` varchar(100) DEFAULT NULL,
+  `tgl_cek_laporan` date DEFAULT NULL,
+  `keterangan_cek` text DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Dumping data for table `cek_berkas`
+--
+
+INSERT INTO `cek_berkas` (`id_cek`, `no_tiket`, `cek_id`, `tgl_cek_id`, `cek_berkas`, `tgl_cek_berkas`, `cek_laporan`, `tgl_cek_laporan`, `keterangan_cek`) VALUES
+(8, '72TCC28PYV', NULL, NULL, NULL, NULL, NULL, NULL, NULL),
+(10, 'GQT9NRHDBX', '1', '2022-03-13', '1', '2022-03-13', '1', '2022-03-13', ' Seluruh data lengkap'),
+(11, 'LN1MR53LS0', '1', '2022-03-15', '1', '2022-03-15', '1', '2022-03-15', '     Data Lengkap dapat dilanjutkan');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `detail_berkas`
+--
+
+CREATE TABLE `detail_berkas` (
+  `id_berkas` int(11) NOT NULL,
+  `no_tiket` text DEFAULT NULL,
+  `ktp` text DEFAULT NULL,
+  `kk` text DEFAULT NULL,
+  `berkas` text DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Dumping data for table `detail_berkas`
+--
+
+INSERT INTO `detail_berkas` (`id_berkas`, `no_tiket`, `ktp`, `kk`, `berkas`) VALUES
+(17, '72TCC28PYV', '72TCC28PYV-kodk1.jpg', '72TCC28PYV-fadli.jpeg', '72TCC28PYV-Red-eyed-tree-frog.jpg'),
+(19, 'GQT9NRHDBX', 'GQT9NRHDBX-Red-eyed-tree-frog.jpg', 'GQT9NRHDBX-putri.jpeg', NULL),
+(20, 'LN1MR53LS0', 'LN1MR53LS0-rahmat.jpeg', 'LN1MR53LS0-Diagram1.png', 'LN1MR53LS0-resmob.png');
+
+-- --------------------------------------------------------
+
+--
 -- Table structure for table `detail_laporan`
 --
 
@@ -81,7 +131,9 @@ CREATE TABLE `detail_laporan` (
 --
 
 INSERT INTO `detail_laporan` (`id_detail_laporan`, `id_klasifikasi`, `no_tiket`, `judul_laporan`, `isi_laporan`, `id_user`, `tanggal_kejadian`, `lokasi_kejadian`, `tanggal`, `saksi`, `lampiran_bukti`) VALUES
-(39, 1, '5KPYR6YHWS', 'Pemukulan warga', 'Baiklah', 1, '2022-02-10', 'Jakarta', '2022-02-15 22:18:49', 'Rinaldi', '489-contoh.jpg');
+(46, 4, '72TCC28PYV', 'Pemukulan Sindikat Tidak diketahui', 'Saat itu saya sedang memancing', 24, '2022-03-09', 'dermaga Betung', '2022-03-07 10:38:04', 'kiki', '72TCC28PYV-rizki.jpeg'),
+(48, 3, 'GQT9NRHDBX', 'Pemukulan Sindikat Tidak diketahui', 'wdwqd', 24, '2022-03-22', 'medan', '2022-03-08 08:40:08', 'rival', 'GQT9NRHDBX-Screenshot from 2022-01-30 11-53-30.png'),
+(49, 7, 'LN1MR53LS0', 'Pemukulan Sindikat Tidak diketahui 3', 'saat itu riki sedang pergi', 24, '2022-03-25', 'medan', '2022-03-08 17:50:05', 'riki', 'LN1MR53LS0-rizki.jpeg');
 
 -- --------------------------------------------------------
 
@@ -128,7 +180,9 @@ CREATE TABLE `laporan` (
 --
 
 INSERT INTO `laporan` (`id_lapor`, `no_tiket`, `id_tindakan`, `id_status`, `tanggal_periksa`, `id_staff`, `id_kepala`) VALUES
-(11, '5KPYR6YHWS', 1, 1, NULL, NULL, NULL);
+(18, '72TCC28PYV', 3, 6, NULL, NULL, 20),
+(20, 'GQT9NRHDBX', 4, 3, '2022-03-13', 2, 20),
+(21, 'LN1MR53LS0', 4, 3, '2022-03-15', 2, 20);
 
 -- --------------------------------------------------------
 
@@ -175,7 +229,9 @@ CREATE TABLE `penyidikan` (
 --
 
 INSERT INTO `penyidikan` (`id_penyidikan`, `no_tiket`, `tgl_mulai`, `tgl_selesai`, `id_pengerjaan`, `hasil_penyidikan`, `keterangan_penyidikan`) VALUES
-(7, '5KPYR6YHWS', NULL, NULL, 1, NULL, NULL);
+(15, '72TCC28PYV', NULL, NULL, 1, NULL, NULL),
+(17, 'GQT9NRHDBX', NULL, NULL, 1, NULL, NULL),
+(18, 'LN1MR53LS0', NULL, NULL, 2, NULL, NULL);
 
 -- --------------------------------------------------------
 
@@ -236,10 +292,11 @@ CREATE TABLE `status` (
 --
 
 INSERT INTO `status` (`id_status`, `nama_status`, `colour`, `deskripsi_status`) VALUES
-(1, 'menunggu', 'warning', 'Staff kepolisian sedang memeriksa data anda'),
-(2, 'selesai', 'success', 'telah dilakukan penyesesaian, oleh staff'),
+(1, 'Menunggu', 'warning', 'Staff kepolisian sedang memeriksa data anda'),
+(2, 'Selesai', 'success', 'telah dilakukan penyesesaian, oleh staff'),
 (3, 'Read', 'primary', 'Staff sedang memeriksa  kelengkapan data'),
-(4, 'Pending', 'danger', 'Sedang dilakukan pemeriksaan lebih lanjut oleh para staff');
+(4, 'Pending', 'danger', 'Sedang dilakukan pemeriksaan lebih lanjut oleh para staff'),
+(6, 'Penyelidikan', 'primary', 'Tim Staff sedang melakukan penyeledikan ke lokasi');
 
 -- --------------------------------------------------------
 
@@ -249,12 +306,22 @@ INSERT INTO `status` (`id_status`, `nama_status`, `colour`, `deskripsi_status`) 
 
 CREATE TABLE `surat_tugas` (
   `id_srt_tugas` int(11) NOT NULL,
-  `id_laporan` int(11) NOT NULL,
-  `id_penerima` int(100) NOT NULL,
-  `jadwal_aksi` date NOT NULL,
-  `jadwal_selesai` date NOT NULL,
-  `status_tugas` varchar(300) NOT NULL
+  `no_tiket` varchar(11) DEFAULT NULL,
+  `id_penerima` int(100) DEFAULT NULL,
+  `jadwal_aksi` date DEFAULT NULL,
+  `jadwal_selesai` date DEFAULT NULL,
+  `status_tugas` int(11) DEFAULT NULL,
+  `catatan_surat` text DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Dumping data for table `surat_tugas`
+--
+
+INSERT INTO `surat_tugas` (`id_srt_tugas`, `no_tiket`, `id_penerima`, `jadwal_aksi`, `jadwal_selesai`, `status_tugas`, `catatan_surat`) VALUES
+(9, 'LN1MR53LS0', 23, '2022-03-25', '2022-03-30', 1, 'Segera ditangani'),
+(10, 'GQT9NRHDBX', 23, '2022-03-09', '2022-03-31', 1, 'Secepatnya dikerjakan'),
+(11, '72TCC28PYV', 23, '2022-03-15', '2022-03-16', 1, 'Rahasia');
 
 -- --------------------------------------------------------
 
@@ -273,7 +340,7 @@ CREATE TABLE `tindakan` (
 --
 
 INSERT INTO `tindakan` (`id_tindakan`, `nama_tindakan`, `deskripsi_tindakan`) VALUES
-(1, 'proses pengkajian', 'proses melakukan pengambilan data'),
+(1, 'Proses Pengkajian', 'proses melakukan pengambilan data'),
 (2, 'Perbaikan Data', 'Staff kelpolisian melakukan Perbaikan Data'),
 (3, 'Cek Lokasi', 'Melakukan Cek ke lokasi Kejadian'),
 (4, 'Laporan Penyelasian', 'Pihak staff kepolisian membuat laporan terkait aduan'),
@@ -325,6 +392,18 @@ INSERT INTO `user` (`id_user`, `email`, `nama`, `jenis_kelamin`, `nik`, `alamat`
 ALTER TABLE `admin`
   ADD PRIMARY KEY (`id_admin`),
   ADD KEY `id_role` (`id_role`);
+
+--
+-- Indexes for table `cek_berkas`
+--
+ALTER TABLE `cek_berkas`
+  ADD PRIMARY KEY (`id_cek`);
+
+--
+-- Indexes for table `detail_berkas`
+--
+ALTER TABLE `detail_berkas`
+  ADD PRIMARY KEY (`id_berkas`);
 
 --
 -- Indexes for table `detail_laporan`
@@ -387,7 +466,7 @@ ALTER TABLE `status`
 --
 ALTER TABLE `surat_tugas`
   ADD PRIMARY KEY (`id_srt_tugas`),
-  ADD KEY `id_laporan` (`id_laporan`),
+  ADD KEY `id_laporan` (`no_tiket`),
   ADD KEY `id_penerima` (`id_penerima`);
 
 --
@@ -413,10 +492,22 @@ ALTER TABLE `admin`
   MODIFY `id_admin` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=30;
 
 --
+-- AUTO_INCREMENT for table `cek_berkas`
+--
+ALTER TABLE `cek_berkas`
+  MODIFY `id_cek` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=12;
+
+--
+-- AUTO_INCREMENT for table `detail_berkas`
+--
+ALTER TABLE `detail_berkas`
+  MODIFY `id_berkas` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=21;
+
+--
 -- AUTO_INCREMENT for table `detail_laporan`
 --
 ALTER TABLE `detail_laporan`
-  MODIFY `id_detail_laporan` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=40;
+  MODIFY `id_detail_laporan` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=50;
 
 --
 -- AUTO_INCREMENT for table `klasifikasi`
@@ -428,7 +519,7 @@ ALTER TABLE `klasifikasi`
 -- AUTO_INCREMENT for table `laporan`
 --
 ALTER TABLE `laporan`
-  MODIFY `id_lapor` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=12;
+  MODIFY `id_lapor` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=22;
 
 --
 -- AUTO_INCREMENT for table `pengerjaan`
@@ -440,7 +531,7 @@ ALTER TABLE `pengerjaan`
 -- AUTO_INCREMENT for table `penyidikan`
 --
 ALTER TABLE `penyidikan`
-  MODIFY `id_penyidikan` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
+  MODIFY `id_penyidikan` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=19;
 
 --
 -- AUTO_INCREMENT for table `polisi`
@@ -458,13 +549,13 @@ ALTER TABLE `role`
 -- AUTO_INCREMENT for table `status`
 --
 ALTER TABLE `status`
-  MODIFY `id_status` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
+  MODIFY `id_status` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
 
 --
 -- AUTO_INCREMENT for table `surat_tugas`
 --
 ALTER TABLE `surat_tugas`
-  MODIFY `id_srt_tugas` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `id_srt_tugas` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=12;
 
 --
 -- AUTO_INCREMENT for table `tindakan`
@@ -501,7 +592,6 @@ ALTER TABLE `laporan`
 -- Constraints for table `surat_tugas`
 --
 ALTER TABLE `surat_tugas`
-  ADD CONSTRAINT `surat_tugas_ibfk_1` FOREIGN KEY (`id_laporan`) REFERENCES `laporan` (`id_lapor`),
   ADD CONSTRAINT `surat_tugas_ibfk_2` FOREIGN KEY (`id_penerima`) REFERENCES `admin` (`id_admin`);
 COMMIT;
 

@@ -1,6 +1,9 @@
 <!-- surat tugas dari notiket ke staff -->
 
 <?php
+session_start();
+
+$id_user    = $_SESSION['id_user'];
 $page = "surat_tugas";
 include 'header.php';
 ?>
@@ -56,7 +59,7 @@ include 'header.php';
                         <th>Tanggal Kejadian</th>
                         <th>Tanggal laporan</th>
                         <th>Bukti</th>
-                        <th>cetak</th>
+                        <th>Laporkan</th>
                     </tr>
                 <tfoot>
                     <tr>
@@ -67,7 +70,7 @@ include 'header.php';
                         <th>Jenis Kelamin</th>
                         <th>Pekerjaan</th>
                         <th>Alamat</th>
-                        <th>cetak</th>
+                        <th>Laporkan</th>
                     </tr>
                 </tfoot>
                 <tbody>
@@ -79,7 +82,7 @@ include 'header.php';
                         $query = mysqli_query($konek, "SELECT * FROM detail_laporan WHERE tanggal BETWEEN '" . $_GET['p_awal'] . "' and '" . $_GET['p_akhir'] . "'") or die("SQL Anda Salah");
                     } else {
 
-                        $sql = "SELECT d.*, u.*, st.* FROM detail_laporan d JOIN user u JOIN surat_tugas st WHERE d.id_user = u.id_user and st.no_tiket = d.no_tiket group by d.id_detail_laporan DESC";
+                        $sql = "SELECT d.*, u.*, st.* FROM detail_laporan d JOIN user u JOIN surat_tugas st WHERE st.no_tiket = d.no_tiket and u.id_user = st.id_penerima and st.id_penerima='$id_user' group by d.id_detail_laporan DESC";
                         // $sql = "SELECT d.* , u.* from detail d join user u join user where d.id = u.id and d.id =u.lokasi on ";
                         // $sql = "SELECT * FROM detail_laporan group by id_detail_laporan DESC";
                         $query = mysqli_query($konek, $sql) or die("SQL Anda Salah");

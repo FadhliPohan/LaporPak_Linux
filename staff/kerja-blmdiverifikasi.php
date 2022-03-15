@@ -20,15 +20,7 @@ include 'header.php';
         </div>
         <div class="card-body">
             <div class="table-responsive table-striped">
-                <div class="d-flex justify-content-between">
-                    <a class="btn btn-success w-15 " href="form-add-laporan.php">Tambah Laporan <i class="fas fa-fw fa-plus-circle"></i>
-                        <!-- <span class="spinner-border spinner-border-sm"></span> -->
-                    </a>
-                    <a class="btn btn-danger w-15 " href="">Export To PDF <i class="fas fa-fw fa-file-pdf"></i>
-                        <!-- <span class="spinner-border spinner-border-sm"></span> -->
-                    </a>
-                </div>
-                <br>
+
                 <form action="laporan-semua.php" method="get">
                     <div class="form-row">
                         <div class="form-group col-sm-4">
@@ -62,8 +54,10 @@ include 'header.php';
                         <th>Tanggal Kejadian</th>
                         <th>Tanggal laporan</th>
                         <th>Bukti</th>
-                        <th>Edit</th>
-                        <th>Hapus</th>
+                        <th>Cek ID</th>
+                        <th>Cek Berkas</th>
+                        <th>Cek Laporan</th>
+
                     </tr>
                 <tfoot>
                     <tr>
@@ -74,8 +68,10 @@ include 'header.php';
                         <th>Jenis Kelamin</th>
                         <th>Pekerjaan</th>
                         <th>Alamat</th>
-                        <th>Edit</th>
-                        <th>Hapus</th>
+                        <th>Cek ID</th>
+                        <th>Cek Berkas</th>
+                        <th>Cek Laporan</th>
+
                     </tr>
                 </tfoot>
                 <tbody>
@@ -87,7 +83,7 @@ include 'header.php';
                         $query = mysqli_query($konek, "SELECT * FROM detail_laporan WHERE tanggal BETWEEN '" . $_GET['p_awal'] . "' and '" . $_GET['p_akhir'] . "'") or die("SQL Anda Salah");
                     } else {
 
-                        $sql = "SELECT d.*, u.*,s.*, l.*, p.*, pe.* FROM detail_laporan d JOIN user u JOIN status s JOIN laporan l JOIN penyidikan p JOIN pengerjaan pe WHERE d.id_user = u.id_user and d.no_tiket = l.no_tiket and l.id_status= s.id_status and p.id_pengerjaan = p.id_pengerjaan and p.id_pengerjaan = '1' group by d.id_detail_laporan DESC";
+                        $sql = "SELECT d.*, u.*, l.* FROM detail_laporan d JOIN user u JOIN laporan l WHERE d.id_user = u.id_user and d.no_tiket = l.no_tiket and l.id_staff is NULL group by d.id_detail_laporan DESC";
                         // $sql = "SELECT d.* , u.* from detail d join user u join user where d.id = u.id and d.id =u.lokasi on ";
                         // $sql = "SELECT * FROM detail_laporan group by id_detail_laporan DESC";
                         $query = mysqli_query($konek, $sql) or die("SQL Anda Salah");
@@ -109,9 +105,13 @@ include 'header.php';
                             <td><?= $data['tanggal_kejadian'] ?></td>
                             <td><?= $data['tanggal'] ?></td>
                             <td><?= $data['lampiran_bukti'] ?></td>
-                            <td><a href='form-update-laporan.php?no_tiket=<?php echo $data['no_tiket']; ?>' class='btn btn-warning '><i class="fas fa-pen"></i></a>
+                            <td><a href='cekid.php?no_tiket=<?php echo $data['no_tiket']; ?>' class='btn btn-warning '><i class="fas fa-eye"></i></a>
                             </td>
-                            <td><a href='delete/laporan.php?no_tiket=<?php echo $data['no_tiket']; ?>' class='btn btn-danger '><i class="fas fa-trash"></i></a>
+                            <td><a href='cekberkas.php?no_tiket=<?php echo $data['no_tiket']; ?>' class='btn btn-warning '><i class="fas fa-eye"></i></a>
+                            </td>
+                            <td><a href='cekdata.php?no_tiket=<?php echo $data['no_tiket']; ?>' class='btn btn-warning '><i class="fas fa-eye"></i></a>
+                            </td>
+
                             </td>
                         </tr>
 
