@@ -20,15 +20,7 @@ include 'header.php';
         </div>
         <div class="card-body">
             <div class="table-responsive table-striped">
-                <div class="d-flex justify-content-between">
-                    <a class="btn btn-success w-15 " href="form-add-laporan.php">Tambah Laporan <i class="fas fa-fw fa-plus-circle"></i>
-                        <!-- <span class="spinner-border spinner-border-sm"></span> -->
-                    </a>
-                    <a class="btn btn-danger w-15 " href="">Export To PDF <i class="fas fa-fw fa-file-pdf"></i>
-                        <!-- <span class="spinner-border spinner-border-sm"></span> -->
-                    </a>
-                </div>
-                <br>
+
                 <form action="laporan-semua.php" method="get">
                     <div class="form-row">
                         <div class="form-group col-sm-4">
@@ -62,20 +54,17 @@ include 'header.php';
                         <th>Tanggal Kejadian</th>
                         <th>Tanggal laporan</th>
                         <th>Bukti</th>
-                        <th>Edit</th>
-                        <th>Hapus</th>
                     </tr>
                 <tfoot>
                     <tr>
                         <th>No</th>
-                        <th>No.Tiket</th>
                         <th>Nama</th>
-                        <th>NIK</th>
-                        <th>Jenis Kelamin</th>
-                        <th>Pekerjaan</th>
-                        <th>Alamat</th>
-                        <th>Edit</th>
-                        <th>Hapus</th>
+                        <th>No.Tiket</th>
+                        <th>Judul</th>
+                        <th>Tanggal Kejadian</th>
+                        <th>Tanggal laporan</th>
+                        <th>Bukti</th>
+
                     </tr>
                 </tfoot>
                 <tbody>
@@ -84,7 +73,7 @@ include 'header.php';
                     include "../koneksi.php";
 
                     if (isset($_GET['p_awal']) && isset($_GET['p_akhir'])) {
-                        $query = mysqli_query($konek, "SELECT * FROM detail_laporan WHERE tanggal BETWEEN '" . $_GET['p_awal'] . "' and '" . $_GET['p_akhir'] . "'") or die("SQL Anda Salah");
+                        $query = mysqli_query($konek, "SELECT d.*, u.*,s.*, l.*, p.*, pe.* FROM detail_laporan d JOIN user u JOIN status s JOIN laporan l JOIN penyidikan p JOIN pengerjaan pe WHERE d.id_user = u.id_user and d.no_tiket = l.no_tiket and l.id_status= s.id_status and p.id_pengerjaan = p.id_pengerjaan and p.id_pengerjaan = '7' and tanggal BETWEEN '" . $_GET['p_awal'] . "' and '" . $_GET['p_akhir'] . "'") or die("SQL Anda Salah");
                     } else {
 
                         $sql = "SELECT d.*, u.*,s.*, l.*, p.*, pe.* FROM detail_laporan d JOIN user u JOIN status s JOIN laporan l JOIN penyidikan p JOIN pengerjaan pe WHERE d.id_user = u.id_user and d.no_tiket = l.no_tiket and l.id_status= s.id_status and p.id_pengerjaan = p.id_pengerjaan and p.id_pengerjaan = '7' group by d.id_detail_laporan DESC";
@@ -109,10 +98,7 @@ include 'header.php';
                             <td><?= $data['tanggal_kejadian'] ?></td>
                             <td><?= $data['tanggal'] ?></td>
                             <td><?= $data['lampiran_bukti'] ?></td>
-                            <td><a href='form-update-laporan.php?no_tiket=<?php echo $data['no_tiket']; ?>' class='btn btn-warning '><i class="fas fa-pen"></i></a>
-                            </td>
-                            <td><a href='delete/laporan.php?no_tiket=<?php echo $data['no_tiket']; ?>' class='btn btn-danger '><i class="fas fa-trash"></i></a>
-                            </td>
+
                         </tr>
 
                         <!--Tutup Perulangan data-->

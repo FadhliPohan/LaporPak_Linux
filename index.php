@@ -72,7 +72,7 @@
           </li>
 
           <li><a class="nav-link scrollto" href="#contact">Kontak</a></li>
-          <li><a class="nav-link scrollto" href="login.php">LAPOR</a></li>
+          <li><a class="nav-link scrollto" href="login">LAPOR</a></li>
         </ul>
         <i class="bi bi-list mobile-nav-toggle"></i>
       </nav><!-- .navbar -->
@@ -90,7 +90,7 @@
         <div class="carousel-container">
           <h2 class="animate__animated animate__fadeInDown">Selamat Datang Di <span>Pelayanaan Aduan Masyarakat</span></h2>
           <p class="animate__animated fanimate__adeInUp">Kami merupakan sarana untuk mendapatkan informasi dalam menanggapi aduan masyarakat.</p>
-          <a href="login.php" class="btn-get-started animate__animated animate__fadeInUp scrollto">Cek Disini</a>
+          <a href="login" class="btn-get-started animate__animated animate__fadeInUp scrollto">Cek Disini</a>
         </div>
       </div>
 
@@ -99,7 +99,7 @@
         <div class="carousel-container">
           <h2 class="animate__animated animate__fadeInDown">Siapakah Kami?</h2>
           <p class="animate__animated animate__fadeInUp">Pemerintah Republik Indonesia membentuk Sistem Pengelolaan Pengaduan Pelayanan Publik Nasional (SP4N) - Layanan Aspirasi dan Pengaduan Online Rakyat (LAPOR!) adalah layanan penyampaian semua aspirasi dan pengaduan masyarakat Indonesia melalui beberapa kanal pengaduan .LAPOR! telah ditetapkan sebagai Sistem Pengelolaan Pengaduan Pelayanan Publik Nasional (SP4N) berdasarkan Peraturan Presiden Nomor 76 Tahun 2013 dan Peraturan Menteri Pendayagunaan Aparatur Negara dan Reformasi Birokrasi Nomor 3 Tahun 2015.</p>
-          <a href="login.php" class="btn-get-started animate__animated animate__fadeInUp scrollto">Cek Disini</a>
+          <a href="login" class="btn-get-started animate__animated animate__fadeInUp scrollto">Cek Disini</a>
         </div>
       </div>
 
@@ -108,7 +108,7 @@
         <div class="carousel-container">
           <h2 class="animate__animated animate__fadeInDown">Bagaimana Kami Bisa mengadu?</h2>
           <p class="animate__animated animate__fadeInUp">dibentuk untuk merealisasikan kebijakan “no wrong door policy” yang menjamin hak masyarakat agar pengaduan dari manapun dan jenis apapun akan disalurkan kepada penyelenggara pelayanan publik yang berwenang menanganinya. </p>
-          <a href="login.php" class="btn-get-started animate__animated animate__fadeInUp scrollto">LAPOR</a>
+          <a href="login" class="btn-get-started animate__animated animate__fadeInUp scrollto">LAPOR</a>
         </div>
       </div>
 

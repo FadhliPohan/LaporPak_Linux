@@ -1,12 +1,14 @@
+<!-- surat tugas dari notiket ke staff -->
+
 <?php
-$page = "semua";
+$page = "surat_tugas";
 include 'header.php';
 ?>
 <!-- Begin Page Content -->
 <div class="container-fluid">
 
     <!-- Page Heading -->
-    <h1 class="h3 mb-2 text-gray-800">Tabel Semua Laporan</h1>
+    <h1 class="h3 mb-2 text-gray-800">Tabel Semua Tugas</h1>
     <p class="mb-4">Data dibawah ini merupakan data yang didapatkan dari seluruh aduan laporan yang dilaporkkan oleh pelapor.</p>
 
     <!-- DataTales Example -->
@@ -20,15 +22,7 @@ include 'header.php';
         </div>
         <div class="card-body">
             <div class="table-responsive table-striped">
-                <div class="d-flex justify-content-between">
-                    <a class="btn btn-success w-15 " href="form-add-laporan.php">Tambah Laporan <i class="fas fa-fw fa-plus-circle"></i>
-                        <!-- <span class="spinner-border spinner-border-sm"></span> -->
-                    </a>
-                    <a class="btn btn-danger w-15 " href="">Export To PDF <i class="fas fa-fw fa-file-pdf"></i>
-                        <!-- <span class="spinner-border spinner-border-sm"></span> -->
-                    </a>
-                </div>
-                <br>
+
                 <form action="laporan-semua.php" method="get">
                     <div class="form-row">
                         <div class="form-group col-sm-4">
@@ -62,8 +56,7 @@ include 'header.php';
                         <th>Tanggal Kejadian</th>
                         <th>Tanggal laporan</th>
                         <th>Bukti</th>
-                        <th>Edit</th>
-                        <th>Hapus</th>
+                        <th>cetak</th>
                     </tr>
                 <tfoot>
                     <tr>
@@ -74,8 +67,7 @@ include 'header.php';
                         <th>Jenis Kelamin</th>
                         <th>Pekerjaan</th>
                         <th>Alamat</th>
-                        <th>Edit</th>
-                        <th>Hapus</th>
+                        <th>cetak</th>
                     </tr>
                 </tfoot>
                 <tbody>
@@ -87,7 +79,7 @@ include 'header.php';
                         $query = mysqli_query($konek, "SELECT * FROM detail_laporan WHERE tanggal BETWEEN '" . $_GET['p_awal'] . "' and '" . $_GET['p_akhir'] . "'") or die("SQL Anda Salah");
                     } else {
 
-                        $sql = "SELECT d.*, u.* FROM detail_laporan d JOIN user u WHERE d.id_user = u.id_user group by d.id_detail_laporan DESC";
+                        $sql = "SELECT d.*, u.*, st.* FROM detail_laporan d JOIN user u JOIN surat_tugas st WHERE d.id_user = u.id_user and st.no_tiket = d.no_tiket group by d.id_detail_laporan DESC";
                         // $sql = "SELECT d.* , u.* from detail d join user u join user where d.id = u.id and d.id =u.lokasi on ";
                         // $sql = "SELECT * FROM detail_laporan group by id_detail_laporan DESC";
                         $query = mysqli_query($konek, $sql) or die("SQL Anda Salah");
@@ -109,10 +101,9 @@ include 'header.php';
                             <td><?= $data['tanggal_kejadian'] ?></td>
                             <td><?= $data['tanggal'] ?></td>
                             <td><?= $data['lampiran_bukti'] ?></td>
-                            <td><a href='form-update-laporan.php?no_tiket=<?php echo $data['no_tiket']; ?>' class='btn btn-warning '><i class="fas fa-pen"></i></a>
+                            <td align="center"><a href='form-add-penyidikan.php?no_tiket=<?php echo $data['no_tiket']; ?>' class='btn btn-success'><i class="fas fa-print"></i></a>
                             </td>
-                            <td><a href='delete/laporan.php?no_tiket=<?php echo $data['no_tiket']; ?>' class='btn btn-danger '><i class="fas fa-trash"></i></a>
-                            </td>
+
                         </tr>
 
                         <!--Tutup Perulangan data-->

@@ -26,13 +26,13 @@ if (mysqli_num_rows($user) > 0) {
         $_SESSION['id_user']   = $userData['id_user'];
 
         if ($userData['id_role'] == 1) {
-            echo "<script>alert('Anda Telah Login Sebagai Super Admin');location.href='superadmin/index.php'</script>";
+            echo "<script>alert('Anda Telah Login Sebagai Super Admin');location.href='../superadmin/index.php'</script>";
         } elseif ($userData['id_role'] == 2) {
-            echo "<script>alert('Anda Telah Login Sebagai Staff Kepolisian');location.href='staff/index.php'</script>";
+            echo "<script>alert('Anda Telah Login Sebagai Staff Kepolisian');location.href='../staff/index.php'</script>";
         } elseif ($userData['id_role'] == 3) {
-            echo "<script>alert('Anda Telah Login Sebagai Kepala Kepolisian');location.href='kepala/index.php'</script>";
+            echo "<script>alert('Anda Telah Login Sebagai Kepala Kepolisian');location.href='../kepala/index.php'</script>";
         } else {
-            echo "<script>alert('Anda Telah Login Sebagai Pelapor');location.href='user/index.php'</script>";
+            echo "<script>alert('Anda Telah Login Sebagai Pelapor');location.href='../user/index.php'</script>";
         }
     } else {
         echo "<script>alert('Username dan Password tidak terdaftar');location.href='login.php'</script>";

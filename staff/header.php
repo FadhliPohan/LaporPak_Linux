@@ -1,7 +1,7 @@
 <?php
 session_start();
 if (empty($_SESSION['status_login'])) {
-    header("location:../login.php");
+    header("location:../login");
 }
 include "../koneksi.php";
 

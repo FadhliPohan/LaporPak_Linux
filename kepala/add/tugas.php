@@ -16,9 +16,10 @@ $catatan_surat  = $_POST['catatan_surat'];
 
 $sql1 = "INSERT into surat_tugas SET no_tiket='$no_tiket' ,id_penerima='$id_penerima' ,jadwal_aksi='$jadwal_aksi' ,status_tugas=1 ,jadwal_selesai='$jadwal_selesai' ,catatan_surat='$catatan_surat'";
 
-$sq2 = "UPDATE laporan SET id_tindakan=3,id_status=6,id_kepala='$id_user' WHERE no_tiket='$tiket'";
+$sql2 = "UPDATE laporan SET id_tindakan=3,id_status=6,id_kepala='$id_user' WHERE no_tiket='$no_tiket'";
 // perintah untuk mengeksekusi query di atas
 $insert1     = mysqli_query($konek, $sql1);
+$insert1     = mysqli_query($konek, $sql2);
 
 
 

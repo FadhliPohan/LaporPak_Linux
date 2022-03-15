@@ -7,6 +7,12 @@ include 'header.php';
 $tiket = $_GET['no_tiket'];
 $tiketku = mysqli_query($konek, "SELECT d.*, k.*, u.* FROM detail_laporan d JOIN user u JOIN klasifikasi k WHERE d.no_tiket = '$tiket' and u.id_user = d.id_user and k.id_klasifikasi = d.id_klasifikasi");
 $row = mysqli_fetch_array($tiketku);
+
+
+
+$pemeriksa = mysqli_query($konek, "SELECT st.*, u.* FROM surat_tugas st JOIN user u  WHERE st.no_tiket = '$tiket' and st.id_penerima = u.id_user");
+
+$data = mysqli_fetch_array($pemeriksa);
 ?>
 <!-- Begin Page Content -->
 <div class="container-fluid">
@@ -36,7 +42,7 @@ $row = mysqli_fetch_array($tiketku);
                                     <label>KEPOLISIAN NEGARA REPUBLIK INDONESIA</label><br>
                                     <label>DAERAH SUMATERA SELATAN</label><br>
                                     <label><b>RESORT TALANG KELAPA</b></label><br>
-                                    <label class="address">CJl. Palembang - Jambi No.25, Sukamoro, Talang Klp., Kabupaten Banyu Asin, Sumatera Selatan 30961.<br>
+                                    <label class="address">Jl. Palembang - Jambi No.25, Sukamoro, Talang Klp., Kabupaten Banyu Asin, Sumatera Selatan 30961.<br>
 
                                     </label>
                                 </td>
@@ -58,6 +64,10 @@ $row = mysqli_fetch_array($tiketku);
                                 </td>
                             </tr>
                             <tr>
+                                <td colspan="2" class="noborder">&nbsp;</td>
+                            </tr>
+
+                            <tr>
                                 <th width="15%"></th>
                                 <th width="1%"></th>
                                 <td width="30%"></td>
@@ -65,22 +75,22 @@ $row = mysqli_fetch_array($tiketku);
                             <tr>
                                 <th width="15%">NAMA PENGADU</th>
                                 <th width="1%">:</th>
-                                <td width="30%"><?php echo $row['nama'];?></td>
+                                <td width="30%"><?php echo $row['nama']; ?></td>
                             </tr>
                             <tr>
                                 <th>NOMOR KTP</th>
                                 <th>:</th>
-                                <td><?php echo $row['nik'];?></td>
+                                <td><?php echo $row['nik']; ?></td>
                             </tr>
                             <tr>
                                 <th>TEMPAT TANGGAL LAHIR</th>
                                 <th>:</th>
-                                <td><?php echo $row['tmp_lahir'];?>, <?php echo $row['tgl_lahir'];?></td>
+                                <td><?php echo $row['tmp_lahir']; ?>, <?php echo $row['tgl_lahir']; ?></td>
                             </tr>
                             <tr>
                                 <th>PEKERJAAN</th>
                                 <th>:</th>
-                                <td><?php echo $row['pekerjaan'];?></td>
+                                <td><?php echo $row['pekerjaan']; ?></td>
                             </tr>
                             <tr style="display:none">
                                 <th>NOMOR TIKET</th>
@@ -90,27 +100,22 @@ $row = mysqli_fetch_array($tiketku);
                             <tr>
                                 <th>ALAMAT</th>
                                 <th>:</th>
-                                <td><?php echo $row['alamat'];?></td>
+                                <td><?php echo $row['alamat']; ?></td>
                             </tr>
                             <tr>
                                 <th>AGAMA</th>
                                 <th>:</th>
-                                <td><?php echo $row['agama'];?></td>
+                                <td><?php echo $row['agama']; ?></td>
                             </tr>
                             <tr>
                                 <th>NOMOR HANDPHONE</th>
                                 <th>:</th>
-                                <td><?php echo $row['no_hp'];?></td>
+                                <td><?php echo $row['no_hp']; ?></td>
                             </tr>
                             <tr>
                                 <th>NOMOR TIKET</th>
                                 <th>:</th>
-                                <td><?php echo $row['no_tiket'];?></td>
-                            </tr>
-                            <tr>
-                                <th valign="top">PEMERIKSA BERKAS</th>
-                                <th valign="top">:</th>
-                                <td valign="top" style="text-align: justify;">MEDIA PEMBELAJARAN INTERAKTIF MEMBANGUN ANDROID APPLICATION FOR BEGINNERS BERBASIS MULTIMEDIA</td>
+                                <td><?php echo $row['no_tiket']; ?></td>
                             </tr>
 
                         </tbody>
@@ -139,22 +144,22 @@ $row = mysqli_fetch_array($tiketku);
                             <tr>
                                 <th width="15%">NAMA STAFF</th>
                                 <th width="1%">:</th>
-                                <td width="30%">MUHAMMAD FADHLI DZIL IKRAM</td>
+                                <td width="30%"><?php echo $data['nama']; ?></td>
                             </tr>
                             <tr>
                                 <th>NOMOR KTP</th>
                                 <th>:</th>
-                                <td>160180022</td>
+                                <td><?php echo $data['nik']; ?></td>
                             </tr>
                             <tr>
                                 <th>TEMPAT TANGGAL LAHIR</th>
                                 <th>:</th>
-                                <td>KOTA BONTANG KALIMANTAN TIMUR, 03 APRIL 1998</td>
+                                <td><?php echo $data['tmp_lahir']; ?>, <?php echo $data['tgl_lahir']; ?></td>
                             </tr>
                             <tr>
                                 <th>PEKERJAAN</th>
                                 <th>:</th>
-                                <td>SISTEM INFORMASI</td>
+                                <td><?php echo $data['pekerjaan']; ?></td>
                             </tr>
                             <tr style="display:none">
                                 <th>NOMOR TIKET</th>
@@ -164,27 +169,42 @@ $row = mysqli_fetch_array($tiketku);
                             <tr>
                                 <th>ALAMAT</th>
                                 <th>:</th>
-                                <td>STRATA 1</td>
+                                <td><?php echo $data['alamat']; ?></td>
                             </tr>
                             <tr>
                                 <th>AGAMA</th>
                                 <th>:</th>
-                                <td></td>
+                                <td><?php echo $data['agama']; ?></td>
                             </tr>
                             <tr>
                                 <th>NOMOR HANDPHONE</th>
                                 <th>:</th>
-                                <td>(B) / 11773/SK/BAN-PT/AK-ISK/S/X/2021</td>
+                                <td><?php echo $data['no_hp']; ?></td>
                             </tr>
                             <tr>
                                 <th>NOMOR TIKET</th>
                                 <th>:</th>
-                                <td>(B) / 0575/SK/BAN-PT/Akred/PT/V/2016</td>
+                                <td><?php echo $data['no_tiket']; ?></td>
+                            </tr>
+
+                        </tbody>
+                    </table>
+                    <br>
+                    <table width="100%" style="border:none;">
+                        <tbody>
+                            <tr>
+                                <td colspan="3" valign="top" style="text-align: justify;">
+
+                                    <h6> &nbsp;&nbsp;&nbsp; Dibenarkan bahwa yang beridentitas diatas merupkan staff yang akan melanjutkan proses penyidikan, dan segala hal-hal yang akan dibutuhkan dapat langsung disampaikan dapat langsung diberikan kepada staff tersebut.</h6>
+
+                                </td>
                             </tr>
                             <tr>
-                                <th valign="top">PEMERIKSA BERKAS</th>
-                                <th valign="top">:</th>
-                                <td valign="top" style="text-align: justify;">MEDIA PEMBELAJARAN INTERAKTIF MEMBANGUN ANDROID APPLICATION FOR BEGINNERS BERBASIS MULTIMEDIA</td>
+                                <td colspan="3" valign="top" style="text-align: justify;">
+
+                                    <h6> &nbsp;&nbsp;&nbsp; Sehubungan dengan surat ini kami ucapkan terimakasih sebesar besarnya kepada kedua belah pihak dan dapat diterima dengan baik, dan semoga aduan diatas dapat diselesaikan dengan maksimal.</h6>
+
+                                </td>
                             </tr>
 
                         </tbody>
@@ -195,17 +215,12 @@ $row = mysqli_fetch_array($tiketku);
                             <tr>
                                 <td colspan="2" class="noborder">&nbsp;</td>
                             </tr>
-                            <tr>
-                                <td colspan="2" class="noborder">&nbsp;</td>
-                            </tr>
-                            <tr>
-                                <td colspan="2" class="noborder">&nbsp;</td>
-                            </tr>
+
                             <tr>
                                 <td width="60%" rowspan="14" class="noborder">
                                     <div style="border: 1px ;width: 80px;height: 120px;float: right;margin-right: 38px;"></div>
                                 </td>
-                                <td class="left noborder">Talang Kelapa, <?php echo date("Y/m/d");?></td>
+                                <td class="left noborder">Talang Kelapa, <?php echo date("Y/m/d"); ?></td>
                             </tr>
                             <tr>
                                 <td class="left noborder"><span id="POLSEK TALANG KELAPA	">POLSEK TALANG KELAPA </span></td>
@@ -222,12 +237,7 @@ $row = mysqli_fetch_array($tiketku);
                             <tr>
                                 <th class="left noborder">&nbsp; </th>
                             </tr>
-                            <tr>
-                                <th class="left noborder">&nbsp; </th>
-                            </tr>
-                            <tr>
-                                <th class="left noborder">&nbsp; </th>
-                            </tr>
+
                             <tr>
                                 <th colspan="3" class="left noborder">&nbsp; </th>
                             </tr>
@@ -237,15 +247,7 @@ $row = mysqli_fetch_array($tiketku);
                             <tr>
                                 <td class="left noborder">NIP. <span id="	86111595"> 86111595</span></td>
                             </tr>
-                            <tr>
-                                <th colspan="3" class="noborder">&nbsp; </th>
-                            </tr>
-                            <tr>
-                                <th colspan="3" class="noborder">&nbsp; </th>
-                            </tr>
-                            <tr>
-                                <th colspan="3" class="noborder">&nbsp; </th>
-                            </tr>
+
                         </tbody>
                     </table>
                 </div>
@@ -253,8 +255,9 @@ $row = mysqli_fetch_array($tiketku);
 
             <!-- tombol -->
             <div class="form-actions">
-                <button href="laporan-semua.php" class="btn btn-info mt-2"><i class="fas fa-fw fa-arrow-left"></i> Kembali</button>
-                <button type="submit" class="btn btn-success mt-2"> <i class="fa fa-check"></i> Cetak</button>
+                <button href="tbl_surat_tugas.php" class="btn btn-info mt-1"><i class="fas fa-fw fa-arrow-left"></i> Kembali</button>
+                <a href='cetak/cetak.php?no_tiket=<?php echo $data['no_tiket']; ?>' class='btn btn-success mt-1'><i class="fas fa-print"></i> Cetak</a>
+
 
             </div>
 

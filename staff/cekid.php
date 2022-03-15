@@ -126,9 +126,16 @@ $row = mysqli_fetch_array($mailku);
                 <div class="form-group row">
                     <label for="foto" class="col-sm-2 col-form-label">Foto Profil</label>
                     <div class="col-sm-10">
-                        <input type="file" name="foto" class="form-control" id="foto" placeholder="Foto anda" value="">
+                        <div class="input-group">
+                            <input type="file" name="foto" class="form-control" id="foto" placeholder="Foto anda" value="">
+
+                            <div class="input-group-append">
+                                <a target="_blank" href="../assets/img/foto/<?php echo $row['foto'] ?>" class="btn btn-success m-1">Lihat disini</a>
+                            </div>
+                        </div>
 
                     </div>
+
                 </div>
                 <div class="form-actions">
                     <a href="laporan-semua.php" class="btn btn-info mt-2"><i class="fas fa-fw fa-arrow-left"></i> Kembali</a>

@@ -3,7 +3,7 @@ include '../../koneksi.php';
 
 session_start();
 $id_user          = $_SESSION['id_user'];
-
+$tiket = $_GET['no_tiket'];
 
 // menyimpan hasil inputan kedalam variabel
 $id_user          = $_SESSION['id_user'];
@@ -12,9 +12,11 @@ $sql = "UPDATE laporan SET id_tindakan=2,id_status=3,id_staff='$id_user' tanggal
 
 $sql1 = "UPDATE cek_berkas SET cek_id=1, tgl_cek_id= NOW() WHERE no_tiket='$tiket'";
 
+$sql2 = "UPDATE penyidikan SET id_pegerjaan=2 WHERE no_tiket='$tiket'";
 
-
+$insert2     = mysqli_query($konek, $sql2);
 $insert     = mysqli_query($konek, $sql);
+
 $insert1     = mysqli_query($konek, $sql1);
 
 
