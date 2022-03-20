@@ -58,18 +58,18 @@ include 'header.php';
                         <th>Judul</th>
                         <th>Tanggal Kejadian</th>
                         <th>Tanggal laporan</th>
-                        <th>Bukti</th>
+                        <th>Status</th>
                         <th>Laporkan</th>
                     </tr>
                 <tfoot>
                     <tr>
                         <th>No</th>
-                        <th>No.Tiket</th>
                         <th>Nama</th>
-                        <th>NIK</th>
-                        <th>Jenis Kelamin</th>
-                        <th>Pekerjaan</th>
-                        <th>Alamat</th>
+                        <th>No.Tiket</th>
+                        <th>Judul</th>
+                        <th>Tanggal Kejadian</th>
+                        <th>Tanggal laporan</th>
+                        <th>Status</th>
                         <th>Laporkan</th>
                     </tr>
                 </tfoot>

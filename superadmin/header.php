@@ -58,6 +58,7 @@ if ($idrole == 4) {
             <a class="sidebar-brand d-flex align-items-center justify-content-center" href="index.php">
                 <div class="sidebar-brand-icon rotate-n-15">
                     <i class="fas fa-laugh-wink"></i>
+
                 </div>
                 <div class="sidebar-brand-text mx-3">LAPOR PAK <sup>!</sup></div>
             </a>
@@ -128,7 +129,7 @@ if ($idrole == 4) {
                                     echo "active";
                                 } elseif ($page == "tindakan") {
                                     echo "active";
-                                }else {
+                                } else {
                                     echo "";
                                 } ?>">
                 <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="true" aria-controls="collapseTwo">
