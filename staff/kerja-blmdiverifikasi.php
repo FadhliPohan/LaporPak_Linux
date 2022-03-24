@@ -80,7 +80,7 @@ include 'header.php';
                     include "../koneksi.php";
 
                     if (isset($_GET['p_awal']) && isset($_GET['p_akhir'])) {
-                        $query = mysqli_query($konek, "SELECT * FROM detail_laporan WHERE tanggal BETWEEN '" . $_GET['p_awal'] . "' and '" . $_GET['p_akhir'] . "'") or die("SQL Anda Salah");
+                        $query = mysqli_query($konek, "SELECT d.*, u.*, l.* FROM detail_laporan d JOIN user u JOIN laporan l WHERE d.id_user = u.id_user and d.no_tiket = l.no_tiket and l.id_staff is NULL and tanggal BETWEEN '" . $_GET['p_awal'] . "' and '" . $_GET['p_akhir'] . "'") or die("SQL Anda Salah");
                     } else {
 
                         $sql = "SELECT d.*, u.*, l.* FROM detail_laporan d JOIN user u JOIN laporan l WHERE d.id_user = u.id_user and d.no_tiket = l.no_tiket and l.id_staff is NULL group by d.id_detail_laporan DESC";

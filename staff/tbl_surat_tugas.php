@@ -82,7 +82,7 @@ include 'header.php';
                         $query = mysqli_query($konek, "SELECT * FROM detail_laporan WHERE tanggal BETWEEN '" . $_GET['p_awal'] . "' and '" . $_GET['p_akhir'] . "'") or die("SQL Anda Salah");
                     } else {
 
-                        $sql = "SELECT d.*, u.*, st.* FROM detail_laporan d JOIN user u JOIN surat_tugas st WHERE st.no_tiket = d.no_tiket and u.id_user = st.id_penerima and st.id_penerima='$id_user' group by d.id_detail_laporan DESC";
+                        $sql = "SELECT d.*, u.*, st.*, p.* FROM detail_laporan d JOIN user u JOIN surat_tugas st JOIN penyidikan p WHERE d.id_user = u.id_user and st.no_tiket = d.no_tiket and d.no_tiket = p.no_tiket and p.id_pengerjaan =2 group by d.id_detail_laporan DESC";
                         // $sql = "SELECT d.* , u.* from detail d join user u join user where d.id = u.id and d.id =u.lokasi on ";
                         // $sql = "SELECT * FROM detail_laporan group by id_detail_laporan DESC";
                         $query = mysqli_query($konek, $sql) or die("SQL Anda Salah");

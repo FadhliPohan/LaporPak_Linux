@@ -76,7 +76,7 @@ include 'header.php';
                     include "../koneksi.php";
 
                     if (isset($_GET['p_awal']) && isset($_GET['p_akhir'])) {
-                        $query = mysqli_query($konek, "SELECT * FROM detail_laporan WHERE tanggal BETWEEN '" . $_GET['p_awal'] . "' and '" . $_GET['p_akhir'] . "'") or die("SQL Anda Salah");
+                        $query = mysqli_query($konek, "SELECT d.*, u.*, cb.* FROM detail_laporan d JOIN user u join cek_berkas cb WHERE d.id_user = u.id_user and d.no_tiket=cb.no_tiket and cb.cek_id=1 and cb.cek_berkas=1 AND cb.cek_laporan=1 and tanggal BETWEEN '" . $_GET['p_awal'] . "' and '" . $_GET['p_akhir'] . "'") or die("SQL Anda Salah");
                     } else {
 
                         $sql = "SELECT d.*, u.*, cb.* FROM detail_laporan d JOIN user u join cek_berkas cb WHERE d.id_user = u.id_user and d.no_tiket=cb.no_tiket and cb.cek_id=1 and cb.cek_berkas=1 AND cb.cek_laporan=1 group by d.id_detail_laporan DESC";

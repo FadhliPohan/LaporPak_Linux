@@ -62,8 +62,8 @@ include 'header.php';
                         <th>Tanggal Kejadian</th>
                         <th>Tanggal laporan</th>
                         <th>Bukti</th>
-                        <th>Edit</th>
-                        <th>Hapus</th>
+                        <th>Cek</th>
+
                     </tr>
                 <tfoot>
                     <tr>
@@ -74,8 +74,8 @@ include 'header.php';
                         <th>Jenis Kelamin</th>
                         <th>Pekerjaan</th>
                         <th>Alamat</th>
-                        <th>Edit</th>
-                        <th>Hapus</th>
+                        <th>Cek</th>
+
                     </tr>
                 </tfoot>
                 <tbody>
@@ -84,7 +84,7 @@ include 'header.php';
                     include "../koneksi.php";
 
                     if (isset($_GET['p_awal']) && isset($_GET['p_akhir'])) {
-                        $query = mysqli_query($konek, "SELECT * FROM detail_laporan WHERE tanggal BETWEEN '" . $_GET['p_awal'] . "' and '" . $_GET['p_akhir'] . "'") or die("SQL Anda Salah");
+                        $query = mysqli_query($konek, "SELECT d.*, u.*, l.*, p.* FROM detail_laporan d JOIN user u JOIN status s JOIN laporan l JOIN penyidikan p WHERE d.id_user = u.id_user and d.no_tiket = l.no_tiket and d.no_tiket=p.no_tiket and l.id_status= s.id_status and p.id_pengerjaan = p.id_pengerjaan and p.id_pengerjaan = '2' and tanggal BETWEEN '" . $_GET['p_awal'] . "' and '" . $_GET['p_akhir'] . "'") or die("SQL Anda Salah");
                     } else {
 
                         $sql = "SELECT d.*, u.*, l.*, p.* FROM detail_laporan d JOIN user u JOIN status s JOIN laporan l JOIN penyidikan p WHERE d.id_user = u.id_user and d.no_tiket = l.no_tiket and d.no_tiket=p.no_tiket and l.id_status= s.id_status and p.id_pengerjaan = p.id_pengerjaan and p.id_pengerjaan = '2' group by d.id_detail_laporan DESC;";
@@ -109,10 +109,9 @@ include 'header.php';
                             <td><?= $data['tanggal_kejadian'] ?></td>
                             <td><?= $data['tanggal'] ?></td>
                             <td><?= $data['lampiran_bukti'] ?></td>
-                            <td><a href='form-update-laporan.php?no_tiket=<?php echo $data['no_tiket']; ?>' class='btn btn-warning '><i class="fas fa-pen"></i></a>
+                            <td><a align='center' href='form-update-laporan.php?no_tiket=<?php echo $data['no_tiket']; ?>' class='btn btn-primary '><i class="fas fa-list"></i></a>
                             </td>
-                            <td><a href='delete/laporan.php?no_tiket=<?php echo $data['no_tiket']; ?>' class='btn btn-danger '><i class="fas fa-trash"></i></a>
-                            </td>
+
                         </tr>
 
                         <!--Tutup Perulangan data-->

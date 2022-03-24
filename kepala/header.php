@@ -150,34 +150,7 @@ if ($idrole == 1) {
 
 
             <!-- Nav Item - Pages Collapse Menu -->
-            <li class="nav-item <?php if ($page == "semua") {
-                                    echo "active";
-                                } elseif ($page == "hari") {
-                                    echo "active";
-                                } elseif ($page == "minggu") {
-                                    echo "active";
-                                } elseif ($page == "bulan") {
-                                    echo "active";
-                                } elseif ($page == "tahun") {
-                                    echo "active";
-                                } else {
-                                    echo "";
-                                } ?>">
-                <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="true" aria-controls="collapseTwo">
-                    <i class="fas fa-fw fa-folder"></i>
-                    <span>Data Laporan - Waktu</span>
-                </a>
-                <div id="collapseTwo" class="collapse" aria-labelledby="headingUtilities" data-parent="#accordionSidebar">
-                    <div class="bg-white py-2 collapse-inner rounded">
-                        <h6 class="collapse-header">kreteria Laporan:</h6>
-                        <a class="collapse-item <?php if ($page == "semua") echo "active"; ?>" href="laporan-semua.php">Semua Laporan</a>
-                        <a class="collapse-item <?php if ($page == "hari") echo "active"; ?>" href="laporan-harian.php">Laporan Harian</a>
-                        <a class="collapse-item <?php if ($page == "minggu") echo "active"; ?>" href="laporan-mingguan.php">Laporan Mingguan</a>
-                        <a class="collapse-item <?php if ($page == "bulan") echo "active"; ?>" href="laporan-bulanaan.php">Laporan Bulanaan</a>
-                        <a class="collapse-item <?php if ($page == "tahun") echo "active"; ?>" href="laporan-tahunaan.php">Laporan Tahunaan</a>
-                    </div>
-                </div>
-            </li>
+            
 
 
 

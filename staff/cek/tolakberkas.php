@@ -2,7 +2,7 @@
 include '../../koneksi.php';
 
 $tiket = $_GET['no_tiket'];
-$sql = "UPDATE penyidikan SET id_pegerjaan=4 WHERE no_tiket='$tiket'";
+$sql = "UPDATE penyidikan SET id_pengerjaan=4 WHERE no_tiket='$tiket'";
 $sql1 = "UPDATE cek_berkas SET cek_berkas=2, tgl_cek_berkas= NOW() WHERE no_tiket='$tiket'";
 
 
