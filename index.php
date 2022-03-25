@@ -51,7 +51,7 @@
           <li><a class="nav-link scrollto" href="#about">Profil</a></li>
           <li><a class="nav-link scrollto" href="#services">Layanaan</a></li>
           <li><a class="nav-link scrollto " href="#portfolio">Dokumentasi</a></li>
-          <li><a class="nav-link scrollto" href="#pricing">Informasi Publik</a></li>
+          <!-- <li><a class="nav-link scrollto" href="#pricing">Informasi Publik</a></li> -->
           <li><a class="nav-link scrollto" href="#faq">FAQ</a></li>
           <li class="dropdown"><a href="#"><span>ZONA INTEGRITAS</span> <i class="bi bi-chevron-down"></i></a>
             <ul>
@@ -99,7 +99,7 @@
         <div class="carousel-container">
           <h2 class="animate__animated animate__fadeInDown">Siapakah Kami?</h2>
           <p class="animate__animated animate__fadeInUp">Pemerintah Republik Indonesia membentuk Sistem Pengelolaan Pengaduan Pelayanan Publik Nasional (SP4N) - Layanan Aspirasi dan Pengaduan Online Rakyat (LAPOR!) adalah layanan penyampaian semua aspirasi dan pengaduan masyarakat Indonesia melalui beberapa kanal pengaduan .LAPOR! telah ditetapkan sebagai Sistem Pengelolaan Pengaduan Pelayanan Publik Nasional (SP4N) berdasarkan Peraturan Presiden Nomor 76 Tahun 2013 dan Peraturan Menteri Pendayagunaan Aparatur Negara dan Reformasi Birokrasi Nomor 3 Tahun 2015.</p>
-          <a href="login" class="btn-get-started animate__animated animate__fadeInUp scrollto">Cek Disini</a>
+          <a href="#about" class="btn-get-started animate__animated animate__fadeInUp scrollto">Cek Disini</a>
         </div>
       </div>
 
@@ -354,16 +354,16 @@
         <div class="row">
           <div class="col-lg-4 col-md-6">
             <div class="icon-box" data-aos="zoom-in-left">
-              <div class="icon"><i class="bi bi-briefcase" style="color: #ff689b;"></i></div>
+              <div class="icon"><i class="bi bi-emoji-heart-eyes" style="color: #ff689b;"></i></div>
               <h4 class="title"><a href="">Layanaan Masyarakat</a></h4>
-              <p class="description">Voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident</p>
+              <p class="description">Kami memberikan akses kepada masyaraka dalam memberikan aduan kepada kami melalui sistem LaporPak!</p>
             </div>
           </div>
           <div class="col-lg-4 col-md-6 mt-5 mt-md-0">
             <div class="icon-box" data-aos="zoom-in-left" data-aos-delay="100">
-              <div class="icon"><i class="bi bi-book" style="color: #e9bf06;"></i></div>
+              <div class="icon"><i class="bi bi-clipboard-check" style="color: #e9bf06;"></i></div>
               <h4 class="title"><a href="">Pelayanaan SKCK</a></h4>
-              <p class="description">Minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat tarad limino ata</p>
+              <p class="description">Memberikan Pelayanaan Pembuatan SKCK secara Online, Tanpa ribet harus ke Kapolsek lagi</p>
             </div>
           </div>
 
@@ -371,29 +371,29 @@
             <div class="icon-box" data-aos="zoom-in-left" data-aos-delay="200">
               <div class="icon"><i class="bi bi-card-checklist" style="color: #3fcdc7;"></i></div>
               <h4 class="title"><a href="">Izin Keramaian</a></h4>
-              <p class="description">Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur</p>
+              <p class="description">Memberikan Pelayanaan Pembuatan Surat Izin Keramaian secara Online, Tanpa ribet harus ke Kapolsek lagi</p>
             </div>
           </div>
           <div class="col-lg-4 col-md-6 mt-5">
             <div class="icon-box" data-aos="zoom-in-left" data-aos-delay="300">
-              <div class="icon"><i class="bi bi-binoculars" style="color:#41cf2e;"></i></div>
+              <div class="icon"><i class="bi bi-signpost-split" style="color:#41cf2e;"></i></div>
               <h4 class="title"><a href="">Pengawalan Jalan</a></h4>
-              <p class="description">Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum</p>
+              <p class="description">Memberikan Pelayanaan Pembuatan Surat Pengawalan Jalan secara Online, Tanpa ribet harus ke Kapolsek lagi</p>
             </div>
           </div>
 
           <div class="col-lg-4 col-md-6 mt-5">
             <div class="icon-box" data-aos="zoom-in-left" data-aos-delay="400">
-              <div class="icon"><i class="bi bi-globe" style="color: #d6ff22;"></i></div>
+              <div class="icon"><i class="bi bi-cone-striped" style="color: #d6ff22;"></i></div>
               <h4 class="title"><a href="">Pengamanaan Obyek Khusus</a></h4>
-              <p class="description">At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque</p>
+              <p class="description">Memberikan Pelayanaan Pembuatan Surat Pengamanaan Obyek Khusus secara Online, Tanpa ribet harus ke Kapolsek lagi</p>
             </div>
           </div>
           <div class="col-lg-4 col-md-6 mt-5">
             <div class="icon-box" data-aos="zoom-in-left" data-aos-delay="500">
-              <div class="icon"><i class="bi bi-clock" style="color: #4680ff;"></i></div>
+              <div class="icon"><i class="bi bi-card-list" style="color: #4680ff;"></i></div>
               <h4 class="title"><a href="">BPKB dan STNK</a></h4>
-              <p class="description">Et harum quidem rerum facilis est et expedita distinctio. Nam libero tempore, cum soluta nobis est eligendi</p>
+              <p class="description">Memberikan Pelayanaan Pembuatan Surat BPKB dan STNK secara Online, Tanpa ribet harus ke Kapolsek lagi</p>
             </div>
           </div>
         </div>
@@ -420,7 +420,7 @@
         <div class="row portfolio-container" data-aos="fade-up">
 
           <div class="col-lg-4 col-md-6 portfolio-item filter-app">
-            <div class="portfolio-img"><img src="assets/img/polres/2talang.jpg"img-fluid" alt=""></div>
+            <div class="portfolio-img"><img src="assets/img/polres/2talang.jpg" img-fluid" alt=""></div>
             <div class="portfolio-info">
               <h4>App 1</h4>
               <p>App</p>
@@ -599,7 +599,7 @@
     </section><!-- End Testimonials Section -->
 
     <!-- ======= Pricing Section ======= -->
-    <section id="pricing" class="pricing">
+    <!-- <section id="pricing" class="pricing">
       <div class="container">
 
         <div class="section-title" data-aos="zoom-out">
@@ -681,7 +681,7 @@
         </div>
 
       </div>
-    </section><!-- End Pricing Section -->
+    </section>End Pricing Section -->
 
     <!-- ======= F.A.Q Section ======= -->
     <section id="faq" class="faq">
