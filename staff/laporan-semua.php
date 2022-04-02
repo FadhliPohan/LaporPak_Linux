@@ -1,5 +1,5 @@
 <?php
-$page = "semua";
+$page = "masuk";
 include 'header.php';
 ?>
 <!-- Begin Page Content -->

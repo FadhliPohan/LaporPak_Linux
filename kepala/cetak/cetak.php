@@ -126,7 +126,7 @@ $data = mysqli_fetch_array($pemeriksa);
                     <tr>
                         <th>NOMOR HANDPHONE</th>
                         <th>:</th>
-                        <td><?php echo $row['no_hp']; ?></td>
+                        <td><?php echo $row['no_tlp']; ?></td>
                     </tr>
                     <tr>
                         <th>NOMOR TIKET</th>
@@ -195,7 +195,7 @@ $data = mysqli_fetch_array($pemeriksa);
                     <tr>
                         <th>NOMOR HANDPHONE</th>
                         <th>:</th>
-                        <td><?php echo $data['no_hp']; ?></td>
+                        <td><?php echo $data['no_tlp']; ?></td>
                     </tr>
                     <tr>
                         <th>NOMOR TIKET</th>

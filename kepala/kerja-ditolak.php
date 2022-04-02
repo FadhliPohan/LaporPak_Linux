@@ -6,29 +6,22 @@ include 'header.php';
 <div class="container-fluid">
 
     <!-- Page Heading -->
-    <h1 class="h3 mb-2 text-gray-800">Tabel Semua Laporan</h1>
-    <p class="mb-4">Data dibawah ini merupakan data yang didapatkan dari seluruh aduan laporan yang dilaporkkan oleh pelapor.</p>
+    <h1 class="h3 mb-2 text-gray-800">Tabel Laporan Ditolak</h1>
+    <p class="mb-4">Data dibawah ini merupakan data yang didapatkan dari seluruh aduan laporan yang tidak memenuhi kualifikasi untuk tindak lanjut.</p>
 
     <!-- DataTales Example -->
     <div class="card shadow mb-4">
         <div class="card-header py-3">
             <a class="form-row d-flex justify-left">
-                <a href="laporan-semua.php" class="m-0 font-weight-bold text-primary wa-20 ">Data Keseluruhan Laporan</a>
+                <a href="laporan-semua.php" class="m-0 font-weight-bold text-primary wa-20 ">Data Laporan Ditolak</a>
                 <i class="bi bi-arrow-repeat"></i>
             </a>
 
         </div>
         <div class="card-body">
             <div class="table-responsive table-striped">
-                <div class="d-flex justify-content-between">
-                    <a class="btn btn-success w-15 " href="form-add-laporan.php">Tambah Laporan <i class="fas fa-fw fa-plus-circle"></i>
-                        <!-- <span class="spinner-border spinner-border-sm"></span> -->
-                    </a>
-                    <a class="btn btn-danger w-15 " href="">Export To PDF <i class="fas fa-fw fa-file-pdf"></i>
-                        <!-- <span class="spinner-border spinner-border-sm"></span> -->
-                    </a>
-                </div>
-                <br>
+
+
                 <form action="laporan-semua.php" method="get">
                     <div class="form-row">
                         <div class="form-group col-sm-4">
