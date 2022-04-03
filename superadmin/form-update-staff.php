@@ -58,7 +58,7 @@ $row = mysqli_fetch_array($mailku);
                         <?php $jekel = $row['jenis_kelamin']; ?>
                         <select name="jenis_kelamin" id="jenis_kelamin" class="form-control" required>
                             <option value="">Pilih Jenis Kelamin</option>
-                            <option <?php echo ($jekel == 'Laki-laki') ? "selected" : "" ?>>Laki - laki</option>
+                            <option <?php echo ($jekel == 'Laki-laki') ? "selected" : "" ?>>Laki-Laki</option>
                             <option <?php echo ($jekel == 'Perempuan') ? "selected" : "" ?>>Perempuan</option>
                         </select>
 

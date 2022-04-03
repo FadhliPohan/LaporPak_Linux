@@ -20,7 +20,7 @@ $row = mysqli_fetch_array($mailku);
         </div>
         <div class="card-body">
 
-            <form action="add/su.php" method="POST" enctype="multipart/form-data">
+            <form action="update/user.php" method="POST" enctype="multipart/form-data">
                 <div class="form-group row">
                     <label for="NID" class="col-sm-2 col-form-label">NIK</label>
                     <div class="col-sm-3">
@@ -58,7 +58,7 @@ $row = mysqli_fetch_array($mailku);
                         <?php $jekel = $row['jenis_kelamin']; ?>
                         <select name="jenis_kelamin" id="jenis_kelamin" class="form-control" required>
                             <option value="">Pilih Jenis Kelamin</option>
-                            <option <?php echo ($jekel == 'Laki-laki') ? "selected" : "" ?>>Laki - laki</option>
+                            <option <?php echo ($jekel == 'Laki-Laki') ? "selected" : "" ?>>Laki-Laki</option>
                             <option <?php echo ($jekel == 'Perempuan') ? "selected" : "" ?>>Perempuan</option>
                         </select>
 

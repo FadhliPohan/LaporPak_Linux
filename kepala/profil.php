@@ -1,8 +1,8 @@
 <?php
 $page = "user";
 include 'header.php';
-$tiket = $_GET['no_tiket'];
-$mailku = mysqli_query($konek, "SELECT a.*,dl.*, u.* FROM admin a JOIN detail_laporan dl JOIN role r JOIN user u WHERE dl.no_tiket = '$tiket' AND a.id_role = r.id_role AND a.id_admin = dl.id_user and a.id_admin =u.id_user;");
+$id_mail = $_GET['emailku'];
+$mailku = mysqli_query($konek, "SELECT a.*, r.*, u.* FROM admin a JOIN role r JOIN user u WHERE a.email = '$id_mail' AND a.id_role = r.id_role AND a.email = u.email;");
 $row = mysqli_fetch_array($mailku);
 
 ?>
@@ -20,11 +20,11 @@ $row = mysqli_fetch_array($mailku);
         </div>
         <div class="card-body">
 
-            <form action="" method="POST" enctype="multipart/form-data">
+            <form action="update/profil.php" method="POST" enctype="multipart/form-data">
                 <div class="form-group row">
                     <label for="NID" class="col-sm-2 col-form-label">NIK</label>
                     <div class="col-sm-3">
-                        <input type="text" name="nik" class="form-control" id="nik" placeholder="10 Digit" maxlength="10" value="<?php echo $row['nik'] ?>" required>
+                        <input type="text" name="nik" class="form-control" id="nik" placeholder="10 Digit" maxlength="10" value="<?php echo $row['nik'] ?>" required readonly>
 
                     </div>
                 </div>
@@ -37,20 +37,7 @@ $row = mysqli_fetch_array($mailku);
                     </div>
                 </div>
 
-                <div class="form-group row">
-
-                    <div class="form-group col-sm-6">
-                        <label for="email">Email</label>
-                        <input type="text" name="email" id="email" class="form-control" placeholder="Email yang aktif" value="<?php echo $row['email'] ?>" readonly>
-
-                    </div>
-                    <div class="form-group col-sm-6">
-                        <label for="password">Password</label>
-                        <input type="Password" name="password" id="password" class="form-control" placeholder="Password Email" maxlength="13" value="">
-
-                    </div>
-
-                </div>
+               
 
                 <div class="form-row">
                     <div class="form-group col-sm-4">
@@ -58,7 +45,7 @@ $row = mysqli_fetch_array($mailku);
                         <?php $jekel = $row['jenis_kelamin']; ?>
                         <select name="jenis_kelamin" id="jenis_kelamin" class="form-control" required>
                             <option value="">Pilih Jenis Kelamin</option>
-                            <option <?php echo ($jekel == 'Laki-laki') ? "selected" : "" ?>>Laki - laki</option>
+                            <option <?php echo ($jekel == 'Laki-Laki') ? "selected" : "" ?>>Laki-Laki</option>
                             <option <?php echo ($jekel == 'Perempuan') ? "selected" : "" ?>>Perempuan</option>
                         </select>
 
@@ -126,22 +113,14 @@ $row = mysqli_fetch_array($mailku);
                 <div class="form-group row">
                     <label for="foto" class="col-sm-2 col-form-label">Foto Profil</label>
                     <div class="col-sm-10">
-                        <div class="input-group">
-                            <input type="file" name="foto" class="form-control" id="foto" placeholder="Foto anda" value="">
-
-                            <div class="input-group-append">
-                                <a target="_blank" href="../assets/img/foto/<?php echo $row['foto'] ?>" class="btn btn-success m-1">Lihat disini</a>
-                            </div>
-                        </div>
+                        <input type="file" name="foto" class="form-control" id="foto" placeholder="Foto anda" value="" >
 
                     </div>
-
                 </div>
                 <div class="form-actions">
-                    <a href="laporan-semua.php" class="btn btn-info mt-2"><i class="fas fa-fw fa-arrow-left"></i> Kembali</a>
-                    <a href="cek/id.php?no_tiket=<?php echo $tiket; ?>" class="btn btn-success mt-2"><i class="fa fa-check"></i> Diterima</a>
-                    <a href="cek/tolakid.php?no_tiket=<?php echo $tiket; ?>" class="btn btn-danger mt-2"><i class="fa fa-times"></i> Ditolak</a>
-
+                    <a href="index.php" class="btn btn-info mt-2"><i class="fas fa-fw fa-arrow-left"></i> Kembali</a>
+                    <button type="submit" class="btn btn-success mt-2"> <i class="fa fa-check"></i> Simpan</button>
+                    <button type="reset" class="btn btn-danger mt-2"><i class="fa fa-times"></i> Hapus</button>
                 </div>
             </form>
         </div>
