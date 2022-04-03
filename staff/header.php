@@ -157,13 +157,7 @@ if ($idrole == 1) {
                 <button class="rounded-circle border-0" id="sidebarToggle"></button>
             </div>
 
-            <!-- Sidebar Message -->
-            <div class="sidebar-card d-none d-lg-flex">
-                <img class="sidebar-card-illustration mb-2" src="img/undraw_rocket.svg" alt="...">
-                <p class="text-center mb-2"><strong>Login Sebagai Staff</strong> Kamu dapat mengakses Laporan dari
-                    masyarakat!</p>
-                <a class="btn btn-success btn-sm" href="index.php">Login Now</a>
-            </div>
+           
 
         </ul>
         <!-- End of Sidebar -->
@@ -229,14 +223,15 @@ if ($idrole == 1) {
                             </a>
                             <!-- Dropdown - User Information -->
                             <div class="dropdown-menu dropdown-menu-right shadow animated--grow-in" aria-labelledby="userDropdown">
-                                <a class="dropdown-item" href="#">
+                            <a class="dropdown-item" href="profil.php?emailku=<?= $email ?>">
                                     <i class="fas fa-user fa-sm fa-fw mr-2 text-gray-400"></i>
                                     Profile
                                 </a>
-                                <a class="dropdown-item" href="#">
+                                <a class="dropdown-item" href="setting.php?setting=<?= $email ?>">
                                     <i class="fas fa-cogs fa-sm fa-fw mr-2 text-gray-400"></i>
                                     Settings
                                 </a>
+
 
                                 <div class="dropdown-divider"></div>
                                 <a class="dropdown-item" href="#" data-toggle="modal" data-target="#logoutModal">

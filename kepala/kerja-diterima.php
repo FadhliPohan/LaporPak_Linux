@@ -55,7 +55,7 @@ include 'header.php';
                         <th>Tanggal Kejadian</th>
                         <th>Tanggal laporan</th>
                         <th>Bukti</th>
-                        <th>Cek</th>
+                     
 
                     </tr>
                 <tfoot>
@@ -67,7 +67,7 @@ include 'header.php';
                         <th>Jenis Kelamin</th>
                         <th>Pekerjaan</th>
                         <th>Alamat</th>
-                        <th>Cek</th>
+                     
 
                     </tr>
                 </tfoot>
@@ -102,7 +102,7 @@ include 'header.php';
                             <td><?= $data['tanggal_kejadian'] ?></td>
                             <td><?= $data['tanggal'] ?></td>
                             <td><?= $data['lampiran_bukti'] ?></td>
-                            <td><a align='center' href='form-update-laporan.php?no_tiket=<?php echo $data['no_tiket']; ?>' class='btn btn-primary '><i class="fas fa-list"></i></a>
+                            
                             </td>
 
                         </tr>
