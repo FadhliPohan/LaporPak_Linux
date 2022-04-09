@@ -92,6 +92,8 @@ if ($idrole == 1) {
                                     echo "active";
                                 } elseif ($page == "surat_tugas") {
                                     echo "active";
+                                }elseif ($page == "approved") {
+                                    echo "active";
                                 } elseif ($page == "selesai_tugas") {
                                     echo "active";
                                 } else {
@@ -106,6 +108,7 @@ if ($idrole == 1) {
                         <h6 class="collapse-header">Laporan Utama:</h6>
                         <a class="collapse-item <?php if ($page == "masuk") echo "active"; ?>" href="tbl_laporan_masuk.php">Laporan Masuk</a>
                         <a class="collapse-item <?php if ($page == "surat_tugas") echo "active"; ?>" href="tbl_surat_tugas.php">Surat Tugas</a>
+                        <a class="collapse-item <?php if ($page == "approved") echo "active"; ?>" href="tbl_laporan_disetujui.php">Approved</a>
                         <a class="collapse-item <?php if ($page == "selesai_tugas") echo "active"; ?>" href="tbl_selesai_tugas.php">Laporan Selesai Tugas</a>
 
                     </div>

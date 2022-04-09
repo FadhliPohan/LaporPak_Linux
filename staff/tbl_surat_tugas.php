@@ -59,6 +59,7 @@ include 'header.php';
                         <th>Tanggal Kejadian</th>
                         <th>Tanggal laporan</th>
                         <th>Status</th>
+                        <th align="center">Cek Surat Tugas</th>
                         <th>Laporkan</th>
                     </tr>
                 <tfoot>
@@ -70,6 +71,7 @@ include 'header.php';
                         <th>Tanggal Kejadian</th>
                         <th>Tanggal laporan</th>
                         <th>Status</th>
+                        <th>Cek Surat Tugas</th>
                         <th>Laporkan</th>
                     </tr>
                 </tfoot>
@@ -104,7 +106,8 @@ include 'header.php';
                             <td><?= $data['tanggal_kejadian'] ?></td>
                             <td><?= $data['tanggal'] ?></td>
                             <td><?= $data['lampiran_bukti'] ?></td>
-                            <td align="center"><a href='form-add-penyidikan.php?no_tiket=<?php echo $data['no_tiket']; ?>' class='btn btn-success'><i class="fas fa-print"></i></a>
+                            <td align="center"><a href='surat_tugas.php?no_tiket=<?php echo $data['no_tiket']; ?>' class='btn btn-primary'><i class="fas fa-print"></i></a>
+                            <td align="center"><a href='form-add-penyidikan.php?no_tiket=<?php echo $data['no_tiket']; ?>' class='btn btn-success'><i class="fas fa-add"></i></a>
                             </td>
 
                         </tr>

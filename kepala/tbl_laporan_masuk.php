@@ -79,7 +79,9 @@ include 'header.php';
                         $query = mysqli_query($konek, "SELECT d.*, u.*, l.* FROM detail_laporan d JOIN user u JOIN laporan l WHERE d.id_user = u.id_user and d.no_tiket = l.no_tiket and l.id_kepala is NULL tanggal BETWEEN '" . $_GET['p_awal'] . "' and '" . $_GET['p_akhir'] . "'") or die("SQL Anda Salah");
                     } else {
 
-                        $sql = "SELECT d.*, u.*, l.* FROM detail_laporan d JOIN user u JOIN laporan l WHERE d.id_user = u.id_user and d.no_tiket = l.no_tiket and l.id_kepala is NULL group by d.id_detail_laporan DESC;";
+                        $sql = "SELECT d.*, u.*, l.* , cb.* FROM detail_laporan d JOIN user u JOIN laporan l join cek_berkas cb WHERE d.id_user = u.id_user and d.no_tiket = l.no_tiket and l.id_kepala is NULL and d.no_tiket=cb.no_tiket and cb.cek_id=1 and cb.cek_berkas=1 AND cb.cek_laporan=1 group by d.id_detail_laporan DESC;";
+
+                        // "SELECT d.*, u.*, cb.* FROM detail_laporan d JOIN user u join cek_berkas cb WHERE d.id_user = u.id_user and d.no_tiket=cb.no_tiket and cb.cek_id=1 and cb.cek_berkas=1 AND cb.cek_laporan=1 group by d.id_detail_laporan DESC";
                         // $sql = "SELECT d.* , u.* from detail d join user u join user where d.id = u.id and d.id =u.lokasi on ";
                         // $sql = "SELECT * FROM detail_laporan group by id_detail_laporan DESC";
                         $query = mysqli_query($konek, $sql) or die("SQL Anda Salah");

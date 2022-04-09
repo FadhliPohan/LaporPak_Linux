@@ -18,14 +18,12 @@ $data = mysqli_fetch_array($pemeriksa);
 <div class="container-fluid">
 
     <!-- Page Heading -->
-    <h1 class="h3 mb-2 text-gray-800">Tabel Semua Laporan</h1>
-    <p class="mb-4">Data dibawah ini merupakan data yang didapatkan dari seluruh aduan laporan yang dilaporkkan oleh pelapor.</p>
 
     <!-- DataTales Example -->
     <div class="card shadow mb-4">
         <div class="card-header py-3">
             <a class="form-row d-flex justify-left">
-                <a href="laporan-semua.php" class="m-0 font-weight-bold text-primary wa-20 ">Data Keseluruhan Laporan</a>
+                <a href="laporan-semua.php" class="m-0 font-weight-bold text-primary wa-20 ">Surat Laporan Selesai</a>
                 <i class="bi bi-arrow-repeat"></i>
             </a>
 
@@ -37,7 +35,7 @@ $data = mysqli_fetch_array($pemeriksa);
                     <table table-responsive table-striped>
                         <tbody>
                             <tr>
-                                <td valign="top" width="12%"><img src="../assets/img/polres/lambang_polri.png"  style="width:85px !important;height:85px !important"></td>
+                                <td valign="top" width="12%"><img src="../assets/img/polres/lambang_polri.png" style="width:85px !important;height:85px !important"></td>
                                 <td align="center" valign="top">
                                     <label>KEPOLISIAN NEGARA REPUBLIK INDONESIA</label><br>
                                     <label>DAERAH SUMATERA SELATAN</label><br>
@@ -60,7 +58,7 @@ $data = mysqli_fetch_array($pemeriksa);
                         <tbody>
                             <tr>
                                 <td colspan="3" align="center">
-                                    <h3>SURAT TUGAS ADUAN MASYARAKAT</h3>
+                                    <h3>SURAT SELESAI ADUAN MASYARAKAT</h3>
                                 </td>
                             </tr>
                             <tr>
@@ -126,7 +124,7 @@ $data = mysqli_fetch_array($pemeriksa);
                             <tr>
                                 <td colspan="3" valign="top" style="text-align: justify;">
 
-                                    <h6> &nbsp;&nbsp;&nbsp; Dengan Surat ini maka dibenarkan bahwa yang beridentitas diatas telah memenuhi syarat baik itu identitas, berkas, dan laporan dan selanjutnya akan ditindak lanjuti oleh yang berkaitan sebagai berikut staff.</h6>
+                                    <h6> &nbsp;&nbsp;&nbsp; Dengan Surat ini maka dibenarkan bahwa yang beridentitas diatas telah memenuhi syarat baik itu identitas, berkas, dan laporan dan selanjutnya akan ditindak lanjuti oleh staff yang bersangkutan sebagai berikut.</h6>
 
                                 </td>
                             </tr>
@@ -202,7 +200,7 @@ $data = mysqli_fetch_array($pemeriksa);
                             <tr>
                                 <td colspan="3" valign="top" style="text-align: justify;">
 
-                                    <h6> &nbsp;&nbsp;&nbsp; Sehubungan dengan surat ini kami ucapkan terimakasih sebesar besarnya kepada kedua belah pihak dan dapat diterima dengan baik, dan semoga aduan diatas dapat diselesaikan dengan maksimal.</h6>
+                                    <h6> &nbsp;&nbsp;&nbsp; Sehubungan dengan surat ini kami ucapkan terimakasih sebesar besarnya kepada kedua belah pihak dan dapat diterima dengan baik, dan kami menyatakan bahwa aduan tersebut telah selesai dan dijalankan dengan baik dan benar.</h6>
 
                                 </td>
                             </tr>
@@ -255,8 +253,8 @@ $data = mysqli_fetch_array($pemeriksa);
 
             <!-- tombol -->
             <div class="form-actions">
-                <button href="tbl_surat_tugas.php" class="btn btn-info mt-1"><i class="fas fa-fw fa-arrow-left"></i> Kembali</button>
-                <a href='cetak/cetak.php?no_tiket=<?php echo $data['no_tiket']; ?>' class='btn btn-success mt-1'><i class="fas fa-print"></i> Cetak</a>
+                <button href="tbl_selesai_tugas.php" class="btn btn-info mt-1"><i class="fas fa-fw fa-arrow-left"></i> Kembali</button>
+                <a href='update/approve.php?no_tiket=<?php echo $tiket ?>' class='btn btn-success mt-1'><i class="fas fa-check"></i> Approve</a>
 
 
             </div>

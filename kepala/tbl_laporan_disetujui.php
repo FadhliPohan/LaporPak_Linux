@@ -1,5 +1,5 @@
 <?php
-$page = "diterima";
+$page = "approved";
 include 'header.php';
 
 ?>
@@ -48,27 +48,58 @@ include 'header.php';
             <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
                 <thead style="background-color: #3f65d4; color: #FFFFFF;">
                     <tr>
-                        <th>No</th>
-                        <th>Nama</th>
-                        <th>No.Tiket</th>
-                        <th>Judul</th>
-                        <th>Tanggal Kejadian</th>
-                        <th>Tanggal laporan</th>
-                        <th>Bukti</th>
-                     
+                        <th>
+                            <center><b>No</b></center>
+                        </th>
+                        <th>
+                            <center><b>Nama</b></center>
+                        </th>
+                        <th>
+                            <center><b>No. Tiket</b></center>
+                        </th>
+                        <th>
+                            <center><b>Judul</b></center>
+                        </th>
+                        <th>
+                            <center><b>Tanggal Kejadian</b></center>
+                        </th>
+                        <th>
+                            <center><b>Tanggal laporan</b></center>
+                        </th>
+                        <th>
+                            <center><b>Print</b></center>
+                        </th>
+                        <th>
+                            <center><b>Approve</b></center>
+                        </th>
 
                     </tr>
                 <tfoot>
                     <tr>
-                    <th>No</th>
-                        <th>Nama</th>
-                        <th>No.Tiket</th>
-                        <th>Judul</th>
-                        <th>Tanggal Kejadian</th>
-                        <th>Tanggal laporan</th>
-                        <th>Bukti</th>
-                     
-
+                        <th>
+                            <center><b>No</b></center>
+                        </th>
+                        <th>
+                            <center><b>Nama</b></center>
+                        </th>
+                        <th>
+                            <center><b>No. Tiket</b></center>
+                        </th>
+                        <th>
+                            <center><b>Judul</b></center>
+                        </th>
+                        <th>
+                            <center><b>Tanggal Kejadian</b></center>
+                        </th>
+                        <th>
+                            <center><b>Tanggal laporan</b></center>
+                        </th>
+                        <th>
+                            <center><b>Print</b></center>
+                        </th>
+                        <th>
+                            <center><b>Approve</b></center>
+                        </th>
                     </tr>
                 </tfoot>
                 <tbody>
@@ -101,8 +132,8 @@ include 'header.php';
                             <td><?= $data['judul_laporan'] ?></td>
                             <td><?= $data['tanggal_kejadian'] ?></td>
                             <td><?= $data['tanggal'] ?></td>
-                            <td><?= $data['lampiran_bukti'] ?></td>
-                            
+                            <td align="center"><a href='cetak/cetak_selesai.php?no_tiket=<?php echo $data['no_tiket']; ?>' class='btn btn-primary '><i class="fas fa-list"></i></a>
+                            <td align="center"><a href='surat_selesai.php?no_tiket=<?php echo $data['no_tiket']; ?>' class='btn btn-success '><i class="fas fa-check"></i></a>
                             </td>
 
                         </tr>
