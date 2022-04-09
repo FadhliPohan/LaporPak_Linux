@@ -13,7 +13,7 @@ $tiket = $_GET['no_tiket'];
     <!-- DataTales Example -->
     <div class="card shadow mb-4">
         <div class="card-header py-3 bg-primary">
-            <h6 class="m-0 font-weight-bold text-light">Form Input Surat Tugas</h6>
+            <h6 class="m-0 font-weight-bold text-light">Form Update Surat Tugas</h6>
         </div>
         <div class="card-body">
 

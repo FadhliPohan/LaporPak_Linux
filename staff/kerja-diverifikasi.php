@@ -7,7 +7,7 @@ include 'header.php';
 
     <!-- Page Heading -->
     <h1 class="h3 mb-2 text-gray-800">Tabel Semua Laporan</h1>
-    <p class="mb-4">Data dibawah ini merupakan data yang didapatkan dari seluruh aduan laporan yang dilaporkkan oleh pelapor.</p>
+    <p class="mb-4">Data dibawah ini merupakan data yang didapatkan dari seluruh aduan laporan yang dilaporkkan oleh pelapor yang telah diverifikasi.</p>
 
     <!-- DataTales Example -->
     <div class="card shadow mb-4">

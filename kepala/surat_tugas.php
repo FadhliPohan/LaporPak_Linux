@@ -18,14 +18,12 @@ $data = mysqli_fetch_array($pemeriksa);
 <div class="container-fluid">
 
     <!-- Page Heading -->
-    <h1 class="h3 mb-2 text-gray-800">Tabel Semua Laporan</h1>
-    <p class="mb-4">Data dibawah ini merupakan data yang didapatkan dari seluruh aduan laporan yang dilaporkkan oleh pelapor.</p>
-
+   
     <!-- DataTales Example -->
     <div class="card shadow mb-4">
         <div class="card-header py-3">
             <a class="form-row d-flex justify-left">
-                <a href="laporan-semua.php" class="m-0 font-weight-bold text-primary wa-20 ">Data Keseluruhan Laporan</a>
+                <a href="tbl_surat_tugas.php" class="m-0 font-weight-bold text-primary wa-20 ">Surat Tugas</a>
                 <i class="bi bi-arrow-repeat"></i>
             </a>
 

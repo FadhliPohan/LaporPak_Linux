@@ -16,7 +16,7 @@ $row = mysqli_fetch_array($mailku);
     <!-- DataTales Example -->
     <div class="card shadow mb-4">
         <div class="card-header py-3 bg-primary">
-            <h6 class="m-0 font-weight-bold text-light">Form User</h6>
+            <h6 class="m-0 font-weight-bold text-light">Form Cek User</h6>
         </div>
         <div class="card-body">
 
